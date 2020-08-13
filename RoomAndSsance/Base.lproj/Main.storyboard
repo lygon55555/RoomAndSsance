@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JitsiTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RoomAndSsance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,25 +28,70 @@
                                     <action selector="joinRoom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NLE-kM-f67"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vZT-f8-eYL">
+                                <rect key="frame" x="100" y="634" width="214" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="4Mg-5L-LDg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="UUr-sa-IJ9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="53t-Al-rfR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vZT-f8-eYL" secondAttribute="bottom" constant="100" id="8Sf-e3-Oz9"/>
                             <constraint firstItem="dOv-2y-poz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CAK-mW-sNL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dOv-2y-poz" secondAttribute="trailing" constant="50" id="Ctm-qu-yfv"/>
                             <constraint firstItem="UUr-sa-IJ9" firstAttribute="top" secondItem="dOv-2y-poz" secondAttribute="bottom" constant="50" id="FbY-hs-kKB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vZT-f8-eYL" secondAttribute="trailing" constant="100" id="GeE-r3-knP"/>
                             <constraint firstItem="dOv-2y-poz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="bVh-2n-K7r"/>
+                            <constraint firstItem="vZT-f8-eYL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="cJa-z4-VjS"/>
                             <constraint firstItem="dOv-2y-poz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="mez-wv-iyW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="roomNameTextField" destination="dOv-2y-poz" id="Jvx-wH-QW0"/>
+                        <outlet property="testView" destination="vZT-f8-eYL" id="Ywn-Ah-cCB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="141" y="139"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="x6I-oQ-Uk2">
+            <objects>
+                <viewController id="mL8-5Z-h2o" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lC7-sE-6HQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="OwH-Nl-Xxw"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="tyr-JG-4Sq"/>
+                    <navigationItem key="navigationItem" id="SK1-Ht-ad2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mFf-D8-K99" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050.7246376811595" y="933.48214285714278"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="I6B-jk-7Lz">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gLf-v3-jL5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E5p-0b-omk">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="mL8-5Z-h2o" kind="relationship" relationship="viewControllers" id="paA-wu-WQa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5m6-ML-ftT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="933.48214285714278"/>
         </scene>
     </scenes>
 </document>
