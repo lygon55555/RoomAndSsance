@@ -15,14 +15,23 @@ class ViewController: UIViewController {
 //    fileprivate var jitsiMeetView: JitsiMeetView?
 
     @IBOutlet var testView: UIView!
+    var dotViews: [UIView] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sampleAnimation()
+        dotViews = [UIView(frame: CGRect(x: -15, y: self.testView.frame.height/2-30, width: 15, height: 15)),
+                    UIView(frame: CGRect(x: -15, y: self.testView.frame.height/2-30, width: 15, height: 15)),
+                    UIView(frame: CGRect(x: -15, y: self.testView.frame.height/2-30, width: 15, height: 15))]
+        
+        
+        
+        gradientDesign()
+        startAnimation()
+        hideAnimation()
     }
     
-    func sampleAnimation() {
+    func gradientDesign() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.testView.bounds
         gradientLayer.startPoint = CGPoint(x: 0, y: 1)
@@ -35,11 +44,9 @@ class ViewController: UIViewController {
         gradientLayer.cornerRadius = 12
         testView.layer.addSublayer(gradientLayer)
         testView.layer.cornerRadius = 12
-        
-        let dotViews: [UIView] = [UIView(frame: CGRect(x: -15, y: self.testView.frame.height/2-30, width: 15, height: 15)),
-                                  UIView(frame: CGRect(x: -15, y: self.testView.frame.height/2-30, width: 15, height: 15)),
-                                  UIView(frame: CGRect(x: -15, y: self.testView.frame.height/2-30, width: 15, height: 15))]
-        
+    }
+    
+    func startAnimation() {
         for dotView in dotViews {
             dotView.layer.cornerRadius = dotView.frame.width / 2
             dotView.backgroundColor = UIColor.init(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.7)
@@ -67,6 +74,29 @@ class ViewController: UIViewController {
             i = i + 1
         }
     }
+    
+    func hideAnimation() {
+        for dotView in dotViews {
+            dotView.isHidden = true
+        }
+    }
+    
+    func showAnimation() {
+        for dotView in dotViews {
+            dotView.isHidden = false
+        }
+    }
+    
+    
+    @IBAction func showButton(_ sender: Any) {
+        showAnimation()
+    }
+    
+    @IBAction func hideButton(_ sender: Any) {
+        hideAnimation()
+    }
+    
+    
     
     @IBAction func joinRoom(_ sender: Any) {
         
