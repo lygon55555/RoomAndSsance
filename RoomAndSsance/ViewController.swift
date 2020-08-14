@@ -19,6 +19,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        sampleAnimation()
+    }
+    
+    func sampleAnimation() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.testView.bounds
         gradientLayer.startPoint = CGPoint(x: 0, y: 1)
@@ -32,17 +36,13 @@ class ViewController: UIViewController {
         testView.layer.addSublayer(gradientLayer)
         testView.layer.cornerRadius = 12
         
-        sampleAnimation()
-    }
-    
-    func sampleAnimation() {
-        let dotViews: [UIView] = [UIView(frame: CGRect(x: -5, y: self.testView.frame.height/2-30, width: 15, height: 15)),
-                                  UIView(frame: CGRect(x: -5, y: self.testView.frame.height/2-30, width: 15, height: 15)),
-                                  UIView(frame: CGRect(x: -5, y: self.testView.frame.height/2-30, width: 15, height: 15))]
+        let dotViews: [UIView] = [UIView(frame: CGRect(x: -15, y: self.testView.frame.height/2-30, width: 15, height: 15)),
+                                  UIView(frame: CGRect(x: -15, y: self.testView.frame.height/2-30, width: 15, height: 15)),
+                                  UIView(frame: CGRect(x: -15, y: self.testView.frame.height/2-30, width: 15, height: 15))]
         
         for dotView in dotViews {
             dotView.layer.cornerRadius = dotView.frame.width / 2
-            dotView.backgroundColor = UIColor.init(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.4)
+            dotView.backgroundColor = UIColor.init(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.7)
             testView.addSubview(dotView)
         }
         
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         let rotateForwardAnimationDuration: TimeInterval = 1
         let rotateBackAnimationDuration: TimeInterval = 1
         let animationDuration: TimeInterval = rotateForwardAnimationDuration + rotateBackAnimationDuration
-
+        
         for dotView in dotViews {
             let delay = 0.2 * Double(i)
             
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
                 }
                 
                 UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: rotateBackAnimationDuration) {
-                    dotView.frame.origin = CGPoint(x: dotView.frame.origin.x + self.testView.frame.width/2, y: dotView.frame.origin.y - self.testView.frame.height/2)
+                    dotView.frame.origin = CGPoint(x: dotView.frame.origin.x + self.testView.frame.width/2 + 40, y: dotView.frame.origin.y - self.testView.frame.height/2)
                 }
             }, completion: nil)
             
