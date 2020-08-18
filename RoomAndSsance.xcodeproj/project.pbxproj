@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7014260492E8AF5968AB04E /* Pods_RoomAndSsance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA69DBA478822A2F4899C00 /* Pods_RoomAndSsance.framework */; };
 		C764505C24E27428005F654B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C764505B24E27428005F654B /* AppDelegate.swift */; };
 		C764505E24E27428005F654B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C764505D24E27428005F654B /* SceneDelegate.swift */; };
 		C764506024E27428005F654B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C764505F24E27428005F654B /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		910CD985E17207E55336A6AB /* Pods-RoomAndSsance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoomAndSsance.debug.xcconfig"; path = "Target Support Files/Pods-RoomAndSsance/Pods-RoomAndSsance.debug.xcconfig"; sourceTree = "<group>"; };
+		A67CF2B1835B877554A7A372 /* Pods-RoomAndSsance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoomAndSsance.release.xcconfig"; path = "Target Support Files/Pods-RoomAndSsance/Pods-RoomAndSsance.release.xcconfig"; sourceTree = "<group>"; };
+		BDA69DBA478822A2F4899C00 /* Pods_RoomAndSsance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoomAndSsance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C764505824E27428005F654B /* RoomAndSsance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoomAndSsance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C764505B24E27428005F654B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C764505D24E27428005F654B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7014260492E8AF5968AB04E /* Pods_RoomAndSsance.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54197CC6E89CB6B57EE15DC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDA69DBA478822A2F4899C00 /* Pods_RoomAndSsance.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B181CA7724414D0DD0EBABF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				910CD985E17207E55336A6AB /* Pods-RoomAndSsance.debug.xcconfig */,
+				A67CF2B1835B877554A7A372 /* Pods-RoomAndSsance.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C764504F24E27428005F654B = {
 			isa = PBXGroup;
 			children = (
 				C764505A24E27428005F654B /* RoomAndSsance */,
 				C764505924E27428005F654B /* Products */,
+				7B181CA7724414D0DD0EBABF /* Pods */,
+				54197CC6E89CB6B57EE15DC2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C764506C24E27429005F654B /* Build configuration list for PBXNativeTarget "RoomAndSsance" */;
 			buildPhases = (
+				40BF23547F372AF1D25F2A75 /* [CP] Check Pods Manifest.lock */,
 				C764505424E27428005F654B /* Sources */,
 				C764505524E27428005F654B /* Frameworks */,
 				C764505624E27428005F654B /* Resources */,
+				8355AA1939327B23A7A1136A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40BF23547F372AF1D25F2A75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RoomAndSsance-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8355AA1939327B23A7A1136A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RoomAndSsance/Pods-RoomAndSsance-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RoomAndSsance/Pods-RoomAndSsance-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RoomAndSsance/Pods-RoomAndSsance-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C764505424E27428005F654B /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		C764506D24E27429005F654B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 910CD985E17207E55336A6AB /* Pods-RoomAndSsance.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		C764506E24E27429005F654B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A67CF2B1835B877554A7A372 /* Pods-RoomAndSsance.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
