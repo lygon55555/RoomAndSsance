@@ -5,7 +5,6 @@ target 'RoomAndSsance' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-	pod "HorizontalFloatingHeaderLayout"
 	pod 'Parchment'
 
   # Pods for RoomAndSsance

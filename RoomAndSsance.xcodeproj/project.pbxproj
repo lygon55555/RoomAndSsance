@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		C764506324E27428005F654B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C764506124E27428005F654B /* Main.storyboard */; };
 		C764506524E27429005F654B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C764506424E27429005F654B /* Assets.xcassets */; };
 		C764506824E27429005F654B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C764506624E27429005F654B /* LaunchScreen.storyboard */; };
+		C7BA81FF24EBA27000C2F739 /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA81FE24EBA27000C2F739 /* TimeTableViewController.swift */; };
+		C7BA820224EBA61A00C2F739 /* HorizontalFloatingHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA820124EBA61A00C2F739 /* HorizontalFloatingHeaderLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		C764506424E27429005F654B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C764506724E27429005F654B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C764506924E27429005F654B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7BA81FE24EBA27000C2F739 /* TimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
+		C7BA820124EBA61A00C2F739 /* HorizontalFloatingHeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalFloatingHeaderLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,6 @@
 				910CD985E17207E55336A6AB /* Pods-RoomAndSsance.debug.xcconfig */,
 				A67CF2B1835B877554A7A372 /* Pods-RoomAndSsance.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -84,12 +87,22 @@
 				C764505B24E27428005F654B /* AppDelegate.swift */,
 				C764505D24E27428005F654B /* SceneDelegate.swift */,
 				C764505F24E27428005F654B /* ViewController.swift */,
+				C7BA81FE24EBA27000C2F739 /* TimeTableViewController.swift */,
+				C7BA820024EBA60700C2F739 /* Util */,
 				C764506124E27428005F654B /* Main.storyboard */,
 				C764506424E27429005F654B /* Assets.xcassets */,
 				C764506624E27429005F654B /* LaunchScreen.storyboard */,
 				C764506924E27429005F654B /* Info.plist */,
 			);
 			path = RoomAndSsance;
+			sourceTree = "<group>";
+		};
+		C7BA820024EBA60700C2F739 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C7BA820124EBA61A00C2F739 /* HorizontalFloatingHeaderLayout.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,7 +222,9 @@
 			files = (
 				C764506024E27428005F654B /* ViewController.swift in Sources */,
 				C764505C24E27428005F654B /* AppDelegate.swift in Sources */,
+				C7BA81FF24EBA27000C2F739 /* TimeTableViewController.swift in Sources */,
 				C764505E24E27428005F654B /* SceneDelegate.swift in Sources */,
+				C7BA820224EBA61A00C2F739 /* HorizontalFloatingHeaderLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
