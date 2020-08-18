@@ -1,16 +1,22 @@
 PODS:
+  - KDCalendar (1.8.9):
+    - KDCalendar/EventManager (= 1.8.9)
+  - KDCalendar/EventManager (1.8.9)
   - Parchment (2.4.0)
 
 DEPENDENCIES:
+  - KDCalendar (~> 1.8.9)
   - Parchment
 
 SPEC REPOS:
   trunk:
+    - KDCalendar
     - Parchment
 
 SPEC CHECKSUMS:
+  KDCalendar: a587bc486b992d82ef94bd04001fce9baf45e518
   Parchment: 002785473861582385db5c6725165353c500198e
 
-PODFILE CHECKSUM: fd668a9c8684d8b073b7ffe2f4ed0fadb9ef2831
+PODFILE CHECKSUM: fc3dc98c7b462586494c5795a2036b6109f24578
 
 COCOAPODS: 1.9.0

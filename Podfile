@@ -6,6 +6,7 @@ target 'RoomAndSsance' do
   use_frameworks!
 
 	pod 'Parchment'
+	pod 'KDCalendar', '~> 1.8.9'
 
   # Pods for RoomAndSsance
 
