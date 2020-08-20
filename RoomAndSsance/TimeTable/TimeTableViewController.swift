@@ -43,5 +43,6 @@ class TimeTableViewController: UIViewController {
         pagingViewController.menuInteraction = .none
         pagingViewController.textColor = UIColor(red: 0.733, green: 0.733, blue: 0.733, alpha: 1)
         pagingViewController.selectedTextColor = UIColor(red: 0.267, green: 0.267, blue: 0.267, alpha: 1)
+        pagingViewController.borderOptions = .hidden
       }
 }
