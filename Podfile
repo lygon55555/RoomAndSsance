@@ -7,6 +7,7 @@ target 'RoomAndSsance' do
 
 	pod 'Parchment'
 	pod 'KDCalendar', '~> 1.8.9'
+	pod 'Tabman', '~> 2.9'
 
   # Pods for RoomAndSsance
 

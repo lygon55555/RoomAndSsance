@@ -20,6 +20,17 @@
 		C7BA820A24EBA89500C2F739 /* MonthlyTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA820924EBA89500C2F739 /* MonthlyTimeTableViewController.swift */; };
 		C7BA820C24EBAA3B00C2F739 /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA820B24EBAA3B00C2F739 /* UIView+constraints.swift */; };
 		C7BA820E24EBAE3E00C2F739 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA820D24EBAE3E00C2F739 /* DateFormatters.swift */; };
+		C7BA821024EBB03200C2F739 /* MonthlyPagingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA820F24EBB03200C2F739 /* MonthlyPagingCell.swift */; };
+		C7BA821224EBB05700C2F739 /* UIColor+interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA821124EBB05700C2F739 /* UIColor+interpolation.swift */; };
+		C7BA821424EBB48C00C2F739 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA821324EBB48C00C2F739 /* ContentViewController.swift */; };
+		C7BA823624EBCD2D00C2F739 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7BA823524EBCD2D00C2F739 /* HeaderView.xib */; };
+		C7D19DFF24ECB242006A6E3B /* WeeklyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D19DFE24ECB242006A6E3B /* WeeklyCollectionViewController.swift */; };
+		C7D19E0124ECB24C006A6E3B /* WeeklyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D19E0024ECB24C006A6E3B /* WeeklyCollectionViewCell.swift */; };
+		C7D19E0324ECB25C006A6E3B /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D19E0224ECB25B006A6E3B /* ClassTableViewCell.swift */; };
+		C7D19E0524ECB7DA006A6E3B /* MonthlyCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D19E0424ECB7DA006A6E3B /* MonthlyCalendarViewController.swift */; };
+		C7D19E0724ECFC71006A6E3B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D19E0624ECFC71006A6E3B /* HomeViewController.swift */; };
+		C7D19E0B24EDFC8D006A6E3B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D19E0A24EDFC8D006A6E3B /* MyPageViewController.swift */; };
+		C7D19E0D24EE0F86006A6E3B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D19E0C24EE0F86006A6E3B /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +51,17 @@
 		C7BA820924EBA89500C2F739 /* MonthlyTimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyTimeTableViewController.swift; sourceTree = "<group>"; };
 		C7BA820B24EBAA3B00C2F739 /* UIView+constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+constraints.swift"; sourceTree = "<group>"; };
 		C7BA820D24EBAE3E00C2F739 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
+		C7BA820F24EBB03200C2F739 /* MonthlyPagingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyPagingCell.swift; sourceTree = "<group>"; };
+		C7BA821124EBB05700C2F739 /* UIColor+interpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+interpolation.swift"; sourceTree = "<group>"; };
+		C7BA821324EBB48C00C2F739 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		C7BA823524EBCD2D00C2F739 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		C7D19DFE24ECB242006A6E3B /* WeeklyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyCollectionViewController.swift; sourceTree = "<group>"; };
+		C7D19E0024ECB24C006A6E3B /* WeeklyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyCollectionViewCell.swift; sourceTree = "<group>"; };
+		C7D19E0224ECB25B006A6E3B /* ClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTableViewCell.swift; sourceTree = "<group>"; };
+		C7D19E0424ECB7DA006A6E3B /* MonthlyCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyCalendarViewController.swift; sourceTree = "<group>"; };
+		C7D19E0624ECFC71006A6E3B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C7D19E0A24EDFC8D006A6E3B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		C7D19E0C24EE0F86006A6E3B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				C7BA820124EBA61A00C2F739 /* HorizontalFloatingHeaderLayout.swift */,
+				C7BA821324EBB48C00C2F739 /* ContentViewController.swift */,
 				C7BA820B24EBAA3B00C2F739 /* UIView+constraints.swift */,
+				C7BA821124EBB05700C2F739 /* UIColor+interpolation.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -120,6 +144,7 @@
 		C7BA820324EBA6B900C2F739 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C7D19E0624ECFC71006A6E3B /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -128,8 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				C7BA81FE24EBA27000C2F739 /* TimeTableViewController.swift */,
-				C7BA820724EBA88E00C2F739 /* WeeklyTimeTableViewController.swift */,
-				C7BA820924EBA89500C2F739 /* MonthlyTimeTableViewController.swift */,
+				C7BA821D24EBBF0A00C2F739 /* Weekly */,
+				C7BA821E24EBBF1400C2F739 /* Monthly */,
 				C7BA820D24EBAE3E00C2F739 /* DateFormatters.swift */,
 			);
 			path = TimeTable;
@@ -145,8 +170,32 @@
 		C7BA820624EBA6D800C2F739 /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
+				C7D19E0A24EDFC8D006A6E3B /* MyPageViewController.swift */,
+				C7D19E0C24EE0F86006A6E3B /* SettingViewController.swift */,
 			);
 			path = MyPage;
+			sourceTree = "<group>";
+		};
+		C7BA821D24EBBF0A00C2F739 /* Weekly */ = {
+			isa = PBXGroup;
+			children = (
+				C7BA820724EBA88E00C2F739 /* WeeklyTimeTableViewController.swift */,
+				C7D19DFE24ECB242006A6E3B /* WeeklyCollectionViewController.swift */,
+				C7D19E0024ECB24C006A6E3B /* WeeklyCollectionViewCell.swift */,
+				C7D19E0224ECB25B006A6E3B /* ClassTableViewCell.swift */,
+				C7BA823524EBCD2D00C2F739 /* HeaderView.xib */,
+			);
+			path = Weekly;
+			sourceTree = "<group>";
+		};
+		C7BA821E24EBBF1400C2F739 /* Monthly */ = {
+			isa = PBXGroup;
+			children = (
+				C7BA820924EBA89500C2F739 /* MonthlyTimeTableViewController.swift */,
+				C7BA820F24EBB03200C2F739 /* MonthlyPagingCell.swift */,
+				C7D19E0424ECB7DA006A6E3B /* MonthlyCalendarViewController.swift */,
+			);
+			path = Monthly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +261,7 @@
 				C764506824E27429005F654B /* LaunchScreen.storyboard in Resources */,
 				C764506524E27429005F654B /* Assets.xcassets in Resources */,
 				C764506324E27428005F654B /* Main.storyboard in Resources */,
+				C7BA823624EBCD2D00C2F739 /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,12 +315,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7BA820A24EBA89500C2F739 /* MonthlyTimeTableViewController.swift in Sources */,
+				C7D19E0B24EDFC8D006A6E3B /* MyPageViewController.swift in Sources */,
+				C7BA821024EBB03200C2F739 /* MonthlyPagingCell.swift in Sources */,
+				C7D19E0524ECB7DA006A6E3B /* MonthlyCalendarViewController.swift in Sources */,
+				C7D19E0724ECFC71006A6E3B /* HomeViewController.swift in Sources */,
+				C7BA821224EBB05700C2F739 /* UIColor+interpolation.swift in Sources */,
 				C764506024E27428005F654B /* ViewController.swift in Sources */,
+				C7BA821424EBB48C00C2F739 /* ContentViewController.swift in Sources */,
 				C7BA820824EBA88E00C2F739 /* WeeklyTimeTableViewController.swift in Sources */,
 				C7BA820E24EBAE3E00C2F739 /* DateFormatters.swift in Sources */,
 				C764505C24E27428005F654B /* AppDelegate.swift in Sources */,
+				C7D19E0324ECB25C006A6E3B /* ClassTableViewCell.swift in Sources */,
 				C7BA81FF24EBA27000C2F739 /* TimeTableViewController.swift in Sources */,
+				C7D19E0124ECB24C006A6E3B /* WeeklyCollectionViewCell.swift in Sources */,
+				C7D19DFF24ECB242006A6E3B /* WeeklyCollectionViewController.swift in Sources */,
 				C764505E24E27428005F654B /* SceneDelegate.swift in Sources */,
+				C7D19E0D24EE0F86006A6E3B /* SettingViewController.swift in Sources */,
 				C7BA820224EBA61A00C2F739 /* HorizontalFloatingHeaderLayout.swift in Sources */,
 				C7BA820C24EBAA3B00C2F739 /* UIView+constraints.swift in Sources */,
 			);
