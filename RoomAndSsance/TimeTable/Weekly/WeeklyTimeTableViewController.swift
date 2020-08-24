@@ -45,7 +45,7 @@ class WeeklyTimeTableViewController: UIViewController {
             spacing: .zero,
             insets: UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         )
-
+        
         // Add the paging view controller as a child view
         // controller and constrain it to all edges
         addChild(pagingViewController)

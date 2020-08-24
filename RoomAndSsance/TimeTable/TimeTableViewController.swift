@@ -23,9 +23,6 @@ class TimeTableViewController: UIViewController {
         let weeklyTimeTableViewController = storyboard.instantiateViewController(withIdentifier: "WeeklyTimeTableVC")
         let monthlyTimeTableViewController = storyboard.instantiateViewController(withIdentifier: "MonthlyTimeTableVC")
         
-        let testVC = storyboard.instantiateViewController(withIdentifier: "WeeklyCollectionVC")
-
-        
         // Initialize a FixedPagingViewController and pass
         // in the view controllers.
         let pagingViewController = PagingViewController(viewControllers: [
@@ -44,5 +41,8 @@ class TimeTableViewController: UIViewController {
         pagingViewController.textColor = UIColor(red: 0.733, green: 0.733, blue: 0.733, alpha: 1)
         pagingViewController.selectedTextColor = UIColor(red: 0.267, green: 0.267, blue: 0.267, alpha: 1)
         pagingViewController.borderOptions = .hidden
-      }
+        pagingViewController.font = UIFont.systemFont(ofSize: 28, weight: .bold)
+        pagingViewController.selectedFont = UIFont.systemFont(ofSize: 28, weight: .bold)
+        pagingViewController.menuItemSize = .fixed(width: UIScreen.main.bounds.width/2, height: 44)
+    }
 }

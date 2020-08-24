@@ -38,46 +38,9 @@ class WeeklyPagingCell: PagingCell {
             y: 0,
             width: contentView.bounds.width,
             height: contentView.bounds.height)
-        
-//        monthLabel.frame = CGRect(
-//            x: 5,
-//            y: contentView.bounds.midY,
-//            width: contentView.bounds.width/2,
-//            height: contentView.bounds.midY)
-//
-//        yearLabel.frame = CGRect(
-//            x: monthLabel.bounds.width,
-//            y: contentView.bounds.midY,
-//            width: contentView.bounds.width/2,
-//            height: contentView.bounds.midY)
-
-//        dateLabel.frame = CGRect(
-//            x: 0,
-//            y: insets.top,
-//            width: contentView.bounds.width,
-//            height: contentView.bounds.midY - insets.top)
-//
-//        weekdayLabel.frame = CGRect(
-//            x: 0,
-//            y: contentView.bounds.midY,
-//            width: contentView.bounds.width,
-//            height: contentView.bounds.midY - insets.bottom)
     }
 
     fileprivate func configure() {
-//        weekdayLabel.backgroundColor = .white
-//        weekdayLabel.textAlignment = .center
-//        dateLabel.backgroundColor = .white
-//        dateLabel.textAlignment = .center
-//
-//        addSubview(weekdayLabel)
-//        addSubview(dateLabel)
-        
-//        monthLabel.backgroundColor = .white
-//        monthLabel.textAlignment = .center
-//        yearLabel.backgroundColor = .white
-//        yearLabel.textAlignment = .center
-        
         dateLabel.backgroundColor = .clear
         dateLabel.textAlignment = .center
         
@@ -88,21 +51,9 @@ class WeeklyPagingCell: PagingCell {
         guard let options = options else { return }
         if selected {
             dateLabel.textColor = options.selectedTextColor
-            
-//            monthLabel.frame = CGRect(
-//                x: 5,
-//                y: contentView.bounds.midY,
-//                width: contentView.bounds.width/2,
-//                height: contentView.bounds.midY)
         }
         else {
             dateLabel.textColor = options.textColor
-            
-//            monthLabel.frame = CGRect(
-//                x: contentView.bounds.midX,
-//                y: contentView.bounds.midY,
-//                width: contentView.bounds.width/2,
-//                height: contentView.bounds.midY)
         }
     }
 
