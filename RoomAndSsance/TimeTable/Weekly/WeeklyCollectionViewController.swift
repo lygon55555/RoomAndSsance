@@ -23,7 +23,7 @@ class WeeklyCollectionViewController: UICollectionViewController, HorizontalFloa
         }
         
         func configureHeaderCell() {
-            let headerNib = UINib(nibName: "HeaderView",bundle: nil)
+            let headerNib = UINib(nibName: "HeaderView", bundle: nil)
             collectionView?.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerView")
         }
         
@@ -59,7 +59,7 @@ class WeeklyCollectionViewController: UICollectionViewController, HorizontalFloa
     //Item Size
     func collectionView(_ collectionView: UICollectionView, horizontalFloatingHeaderItemSizeAt indexPath: IndexPath) -> CGSize {
 //        return CGSize(width:100, height: 48)
-        return CGSize(width:153, height: 500)
+        return CGSize(width:153, height: 300)
     }
     
     //Header Size
