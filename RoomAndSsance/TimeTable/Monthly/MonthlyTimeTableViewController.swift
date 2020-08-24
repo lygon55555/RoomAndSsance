@@ -16,13 +16,13 @@ import Parchment
 // cache the formatted date strings for performance.
 struct CalendarItem: PagingItem, Hashable, Comparable {
     let date: Date
-    let dateText: String
-    let weekdayText: String
+    let monthText: String
+    let yearText: String
 
     init(date: Date) {
         self.date = date
-        self.dateText = DateFormatters.dateFormatter.string(from: date)
-        self.weekdayText = DateFormatters.weekdayFormatter.string(from: date)
+        self.monthText = DateFormatters.monthFormatter.string(from: date)
+        self.yearText = DateFormatters.yearFormatter.string(from: date)
     }
 
     static func < (lhs: CalendarItem, rhs: CalendarItem) -> Bool {
@@ -37,9 +37,20 @@ class MonthlyTimeTableViewController: UIViewController {
 
         let pagingViewController = PagingViewController()
         pagingViewController.register(MonthlyPagingCell.self, for: CalendarItem.self)
-        pagingViewController.menuItemSize = .fixed(width: 48, height: 58)
-        pagingViewController.textColor = UIColor.gray
-
+        pagingViewController.menuItemSize = .selfSizing(estimatedWidth: 165, height: 80)
+        pagingViewController.textColor = UIColor(red: 0.867, green: 0.882, blue: 0.914, alpha: 1)
+        pagingViewController.selectedTextColor = UIColor.white
+        pagingViewController.selectedBackgroundColor = UIColor(red: 0.533, green: 0.173, blue: 0.878, alpha: 1)
+        pagingViewController.indicatorColor = UIColor(red: 0.533, green: 0.173, blue: 0.878, alpha: 1)
+        pagingViewController.indicatorClass = RoundedIndicatorView.self
+        pagingViewController.indicatorOptions = .visible(
+            height: 35,
+            zIndex: -1,
+            spacing: .zero,
+            insets: UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
+        )
+//        pagingViewController.borderOptions = .hidden
+        
         // Add the paging view controller as a child view
         // controller and constrain it to all edges
         addChild(pagingViewController)
@@ -65,14 +76,16 @@ extension MonthlyTimeTableViewController: PagingViewControllerInfiniteDataSource
 
     func pagingViewController(_: PagingViewController, itemAfter pagingItem: PagingItem) -> PagingItem? {
         let calendarItem = pagingItem as! CalendarItem
-        return CalendarItem(date: calendarItem.date.addingTimeInterval(86400))
+        let nextMonth = Calendar.current.date(byAdding: .month, value: 1, to: calendarItem.date)
+        return CalendarItem(date: nextMonth!)
     }
-
+    
     func pagingViewController(_: PagingViewController, itemBefore pagingItem: PagingItem) -> PagingItem? {
         let calendarItem = pagingItem as! CalendarItem
-        return CalendarItem(date: calendarItem.date.addingTimeInterval(-86400))
+        let previousMonth = Calendar.current.date(byAdding: .month, value: -1, to: calendarItem.date)
+        return CalendarItem(date: previousMonth!)
     }
-
+    
     func pagingViewController(_: PagingViewController, viewControllerFor pagingItem: PagingItem) -> UIViewController {
         //    let calendarItem = pagingItem as! CalendarItem
         //    let formattedDate = DateFormatters.shortDateFormatter.string(from: calendarItem.date)
@@ -82,5 +95,13 @@ extension MonthlyTimeTableViewController: PagingViewControllerInfiniteDataSource
         let calendarVC = storyboard.instantiateViewController(withIdentifier: "CalendarVC")
 
         return calendarVC
+    }
+}
+
+class RoundedIndicatorView: PagingIndicatorView {
+    override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
+        super.apply(layoutAttributes)
+        layer.cornerRadius = layoutAttributes.bounds.height / 2
+        layer.masksToBounds = true
     }
 }

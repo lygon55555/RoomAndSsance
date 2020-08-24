@@ -13,18 +13,12 @@ class MonthlyPagingCell: PagingCell {
   
     private var options: PagingOptions?
 
-    lazy var dateLabel: UILabel = {
-        let dateLabel = UILabel(frame: .zero)
-        dateLabel.font = UIFont.systemFont(ofSize: 20)
-        return dateLabel
+    lazy var monthYearLabel: UILabel = {
+        let yearLabel = UILabel(frame: .zero)
+        yearLabel.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        return yearLabel
     }()
-
-    lazy var weekdayLabel: UILabel = {
-        let weekdayLabel = UILabel(frame: .zero)
-        weekdayLabel.font = UIFont.systemFont(ofSize: 12)
-        return weekdayLabel
-    }()
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -37,48 +31,33 @@ class MonthlyPagingCell: PagingCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        let insets = UIEdgeInsets(top: 10, left: 0, bottom: 5, right: 0)
-
-        dateLabel.frame = CGRect(
+        monthYearLabel.frame = CGRect(
             x: 0,
-            y: insets.top,
+            y: 0,
             width: contentView.bounds.width,
-            height: contentView.bounds.midY - insets.top)
-
-        weekdayLabel.frame = CGRect(
-            x: 0,
-            y: contentView.bounds.midY,
-            width: contentView.bounds.width,
-            height: contentView.bounds.midY - insets.bottom)
+            height: contentView.bounds.height)
     }
 
     fileprivate func configure() {
-        weekdayLabel.backgroundColor = .white
-        weekdayLabel.textAlignment = .center
-        dateLabel.backgroundColor = .white
-        dateLabel.textAlignment = .center
-
-        addSubview(weekdayLabel)
-        addSubview(dateLabel)
+        monthYearLabel.backgroundColor = .clear
+        monthYearLabel.textAlignment = .center
+        addSubview(monthYearLabel)
     }
 
     fileprivate func updateSelectedState(selected: Bool) {
         guard let options = options else { return }
         if selected {
-            dateLabel.textColor = options.selectedTextColor
-            weekdayLabel.textColor = options.selectedTextColor
+            monthYearLabel.textColor = options.selectedTextColor
         }
         else {
-            dateLabel.textColor = options.textColor
-            weekdayLabel.textColor = options.textColor
+            monthYearLabel.textColor = options.textColor
         }
     }
 
     override func setPagingItem(_ pagingItem: PagingItem, selected: Bool, options: PagingOptions) {
         self.options = options
         let calendarItem = pagingItem as! CalendarItem
-        dateLabel.text = calendarItem.dateText
-        weekdayLabel.text = calendarItem.weekdayText
+        monthYearLabel.text = calendarItem.monthText + " " + calendarItem.yearText
 
         updateSelectedState(selected: selected)
     }
@@ -88,12 +67,7 @@ class MonthlyPagingCell: PagingCell {
         guard let options = options else { return }
 
         if let attributes = layoutAttributes as? PagingCellLayoutAttributes {
-            dateLabel.textColor = UIColor.interpolate(
-                from: options.textColor,
-                to: options.selectedTextColor,
-                with: attributes.progress)
-
-            weekdayLabel.textColor = UIColor.interpolate(
+            monthYearLabel.textColor = UIColor.interpolate(
                 from: options.textColor,
                 to: options.selectedTextColor,
                 with: attributes.progress)
