@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 class ClassTableViewCell: UITableViewCell {
-    
-    @IBOutlet var title: UILabel!
+    @IBOutlet var backView: UIView!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var statusLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var progressionBar: UIView!
 }

@@ -58,26 +58,26 @@ class WeeklyCollectionViewController: UICollectionViewController, HorizontalFloa
     //MARK: Delegate (HorizontalFloatingHeaderDelegate)
     //Item Size
     func collectionView(_ collectionView: UICollectionView, horizontalFloatingHeaderItemSizeAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width:100, height: 48)
-        return CGSize(width:153, height: 300)
+        let height = UIScreen.main.bounds.height * 320 / 667
+        return CGSize(width: 153, height: height)
     }
     
     //Header Size
     func collectionView(_ collectionView: UICollectionView, horizontalFloatingHeaderSizeAt section: Int) -> CGSize {
 //        return CGSize(width:160, height:30)
-        return CGSize(width:153, height:58)
+        return CGSize(width: 153, height:50)
     }
     
     //Item Spacing
     func collectionView(_ collectionView: UICollectionView, horizontalFloatingHeaderItemSpacingForSectionAt section: Int) -> CGFloat {
 //        return 8.0
-        return 35
+        return 0
     }
     
     //Line Spacing
     func collectionView(_ collectionView: UICollectionView, horizontalFloatingHeaderColumnSpacingForSectionAt section: Int) -> CGFloat {
 //        return 8.0
-        return 13
+        return 0
     }
     
     //Section Insets
@@ -85,9 +85,9 @@ class WeeklyCollectionViewController: UICollectionViewController, HorizontalFloa
         
         switch section{
         case 0:
-            return UIEdgeInsets(top: 8, left: 0, bottom: 0, right: 0)
+            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         default:
-            return UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 0)
+            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         }
     }
 }

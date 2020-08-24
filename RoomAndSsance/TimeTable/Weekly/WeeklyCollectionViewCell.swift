@@ -13,7 +13,7 @@ class WeeklyCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var classTableView: UITableView!
     
-    var ntdlArray = ["Play Video Games", "Eat out", "Watch Netflix"]
+    var ntdlArray = ["신생아 마사지", "포토샵 클래스", "좋은 시 쓰기"]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,20 +30,14 @@ extension WeeklyCollectionViewCell: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClassCell", for: indexPath) as! ClassTableViewCell
-        cell.title.text = ntdlArray[indexPath.row]
+        cell.titleLabel.text = ntdlArray[indexPath.row]
+        cell.backView.layer.cornerRadius = 12
+        cell.selectionStyle = .none
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 126
-    }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 17.5
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 17.5
+        return 161
     }
 }

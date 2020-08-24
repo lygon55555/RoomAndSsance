@@ -86,8 +86,8 @@ extension WeeklyTimeTableViewController: PagingViewControllerInfiniteDataSource 
 }
 
 extension Date {
-    func getWeekDates() -> (thisWeek:[Date],nextWeek:[Date]) {
-        var tuple: (thisWeek:[Date],nextWeek:[Date])
+    func getWeekDates() -> (thisWeek: [Date], nextWeek: [Date]) {
+        var tuple: (thisWeek: [Date], nextWeek: [Date])
         var arrThisWeek: [Date] = []
         
         for i in 0..<7 {
@@ -99,7 +99,7 @@ extension Date {
         for i in 1...7 {
             arrNextWeek.append(Calendar.current.date(byAdding: .day, value: i, to: arrThisWeek.last!)!)
         }
-        tuple = (thisWeek: arrThisWeek,nextWeek: arrNextWeek)
+        tuple = (thisWeek: arrThisWeek, nextWeek: arrNextWeek)
         return tuple
     }
 
@@ -122,24 +122,3 @@ extension Date {
         return formatter.string(from: self)
     }
 }
-
-
-/*
- 사용 방법
- let arrWeekDates = Date().getWeekDates() // Get dates of Current and Next week.
- let dateFormat = "MMM dd" // Date format
- let thisMon = arrWeekDates.thisWeek.first!.toDate(format: dateFormat)
- let thisSat = arrWeekDates.thisWeek[arrWeekDates.thisWeek.count - 2].toDate(format: dateFormat)
- let thisSun = arrWeekDates.thisWeek[arrWeekDates.thisWeek.count - 1].toDate(format: dateFormat)
-
- let nextMon = arrWeekDates.nextWeek.first!.toDate(format: dateFormat)
- let nextSat = arrWeekDates.nextWeek[arrWeekDates.nextWeek.count - 2].toDate(format: dateFormat)
- let nextSun = arrWeekDates.nextWeek[arrWeekDates.nextWeek.count - 1].toDate(format: dateFormat)
-
- print("Today: \(Date().toDate(format: dateFormat))") // Sep 26
- print("Tomorrow: \(Date().tomorrow.toDate(format: dateFormat))") // Sep 27
- print("This Week: \(thisMon) - \(thisSun)") // Sep 24 - Sep 30
- print("This Weekend: \(thisSat) - \(thisSun)") // Sep 29 - Sep 30
- print("Next Week: \(nextMon) - \(nextSun)") // Oct 01 - Oct 07
- print("Next Weekend: \(nextSat) - \(nextSun)") // Oct 06 - Oct 07
-*/
