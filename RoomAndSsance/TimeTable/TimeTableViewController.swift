@@ -17,6 +17,8 @@ class TimeTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.isHidden = true
+        
         // Load each of the view controllers you want to embed
         // from the storyboard.
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -36,6 +38,7 @@ class TimeTableViewController: UIViewController {
         timeTableView.addSubview(pagingViewController.view)
         timeTableView.constrainToEdges(pagingViewController.view)
         pagingViewController.didMove(toParent: self)
+        pagingViewController.menuHorizontalAlignment = .center
         pagingViewController.indicatorColor = UIColor(red: 0.651, green: 0.435, blue: 0.898, alpha: 1)
         pagingViewController.menuInteraction = .none
         pagingViewController.textColor = UIColor(red: 0.733, green: 0.733, blue: 0.733, alpha: 1)
