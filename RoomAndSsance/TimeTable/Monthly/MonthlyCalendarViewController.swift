@@ -15,31 +15,30 @@ class MonthlyCalendarViewController: UIViewController {
     @IBOutlet var calendarView: CalendarView!
     
     override func viewDidLoad() {
-        let style = CalendarView.Style()
+        calendarView.style.cellShape                = .round
+        calendarView.style.cellColorDefault         = UIColor.clear
+        calendarView.style.cellColorToday           = UIColor.clear
+        calendarView.style.cellSelectedBorderColor  = UIColor(red:136/255, green:44/255, blue:224/255, alpha:1.0)
+        calendarView.style.cellSelectedColor        = UIColor(red:136/255, green:44/255, blue:224/255, alpha:1.0)
+        calendarView.style.cellEventColor           = UIColor(red:1.00, green:0.63, blue:0.24, alpha:1.00)
+        calendarView.style.headerTextColor          = UIColor.black
+        calendarView.style.headerHeight             = 50
+
+        calendarView.style.cellTextColorDefault     = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1.0)
+        calendarView.style.cellTextColorToday       = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1.0)
+        calendarView.style.cellTextColorWeekend     = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1.0)
+        calendarView.style.cellColorOutOfRange      = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 0.3)
+        calendarView.style.cellSelectedTextColor    = UIColor.white
+
+        calendarView.style.headerBackgroundColor    = UIColor.white
+        calendarView.style.weekdaysBackgroundColor  = UIColor.white
+        calendarView.style.firstWeekday             = .sunday
+        calendarView.style.locale                   = Locale(identifier: "ko_KR")
+
+        calendarView.style.cellFont = UIFont.systemFont(ofSize: 16, weight: .heavy)
+        calendarView.style.headerFont = UIFont.systemFont(ofSize: 17, weight: .bold)
+        calendarView.style.weekdaysFont = UIFont.systemFont(ofSize: 16, weight: .heavy)
         
-        style.cellShape                = .bevel(8.0)
-        style.cellColorDefault         = UIColor.clear
-        style.cellColorToday           = UIColor(red:196/255, green:217/255, blue:254/255, alpha:1.00)
-        style.cellSelectedBorderColor  = UIColor(red:252/255, green:73/255, blue:20/255, alpha:0.5)
-        style.cellSelectedColor        = UIColor(red:252/255, green:73/255, blue:20/255, alpha:0.5)
-        style.cellEventColor           = UIColor(red:1.00, green:0.63, blue:0.24, alpha:1.00)
-        style.headerTextColor          = UIColor.gray
-
-        style.cellTextColorDefault     = UIColor(red: 160/255, green: 169/255, blue: 186/255, alpha: 1.0)
-        style.cellTextColorToday       = UIColor.black
-        style.cellTextColorWeekend     = UIColor(red: 167/255, green: 175/255, blue: 191/255, alpha: 1.0)
-        style.cellColorOutOfRange      = UIColor(red: 249/255, green: 226/255, blue: 212/255, alpha: 1.0)
-
-        style.headerBackgroundColor    = UIColor.white
-        style.weekdaysBackgroundColor  = UIColor.white
-        style.firstWeekday             = .sunday
-        style.locale                   = Locale(identifier: "ko_KR")
-
-        style.cellFont = UIFont(name: "Helvetica", size: 15.0) ?? UIFont.systemFont(ofSize: 15.0)
-        style.headerFont = UIFont(name: "Helvetica", size: 20.0) ?? UIFont.systemFont(ofSize: 20.0)
-        style.weekdaysFont = UIFont(name: "Helvetica", size: 20.0) ?? UIFont.systemFont(ofSize: 20.0)
-
-        calendarView.style = style
         calendarView.dataSource = self
         calendarView.delegate = self
         calendarView.direction = .horizontal
