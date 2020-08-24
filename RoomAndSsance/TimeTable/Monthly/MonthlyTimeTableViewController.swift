@@ -20,8 +20,11 @@ struct CalendarItem: PagingItem, Hashable, Comparable {
     let yearText: String
 
     init(date: Date) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM"
+        
         self.date = date
-        self.monthText = DateFormatters.monthFormatter.string(from: date)
+        self.monthText = dateFormatter.string(from: date)
         self.yearText = DateFormatters.yearFormatter.string(from: date)
     }
 
@@ -37,7 +40,7 @@ class MonthlyTimeTableViewController: UIViewController {
 
         let pagingViewController = PagingViewController()
         pagingViewController.register(MonthlyPagingCell.self, for: CalendarItem.self)
-        pagingViewController.menuItemSize = .selfSizing(estimatedWidth: 165, height: 80)
+        pagingViewController.menuItemSize = .selfSizing(estimatedWidth: 140, height: 80)
         pagingViewController.textColor = UIColor(red: 0.867, green: 0.882, blue: 0.914, alpha: 1)
         pagingViewController.selectedTextColor = UIColor.white
         pagingViewController.selectedBackgroundColor = UIColor(red: 0.533, green: 0.173, blue: 0.878, alpha: 1)
