@@ -48,7 +48,8 @@ class MonthlyCalendarViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         let today = Date()
-        self.calendarView.setDisplayDate(today)
+//        self.calendarView.setDisplayDate(today)
+        self.calendarView.selectDate(today)
     }
 }
 
