@@ -16,13 +16,13 @@ class MyPagePagingCell: PagingCell {
 
     fileprivate lazy var imageView: UIImageView = {
       let imageView = UIImageView(frame: .zero)
-      imageView.contentMode = .scaleAspectFill
+      imageView.contentMode = .scaleAspectFit
       return imageView
     }()
 
     lazy var titleLabel: UILabel = {
         let titleLabel = UILabel(frame: .zero)
-        titleLabel.font = UIFont.systemFont(ofSize: 12)
+        titleLabel.font = UIFont(name: "NotoSans-Medium", size: 18)
         return titleLabel
     }()
 
@@ -64,14 +64,14 @@ class MyPagePagingCell: PagingCell {
     override func setPagingItem(_ pagingItem: PagingItem, selected: Bool, options: PagingOptions) {
         self.options = options
         let item = pagingItem as! ImageItem
-        imageView.image = item.headerImage
+        imageView.image = item.deselectedImage
         titleLabel.text = item.title
         
         if selected {
-            // imageview 색깔 채워주기
+            imageView.image = item.selectedImage
         }
         else {
-            // imageview 색깔 없애주기
+            imageView.image = item.deselectedImage
         }
     }
 
