@@ -740,7 +740,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTi-2n-HZn" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="858"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="873"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcL-hk-80K" userLabel="Setting Button">
                                                 <rect key="frame" x="361" y="43" width="22" height="24"/>
@@ -763,13 +763,13 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="우리 세라 맘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCm-ho-XxV">
-                                                <rect key="frame" x="162" y="109.5" width="119" height="30"/>
+                                                <rect key="frame" x="158.5" y="109.5" width="119" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbY-bA-Mzh" userLabel="Comment Button View">
-                                                <rect key="frame" x="296" y="165.5" width="59" height="60"/>
+                                                <rect key="frame" x="292.5" y="165.5" width="59" height="60"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BX5-ea-Vve">
                                                         <rect key="frame" x="12" y="4.5" width="35" height="35"/>
@@ -813,7 +813,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="peO-dJ-MEY" userLabel="My Post Button View">
-                                                <rect key="frame" x="223" y="165.5" width="53" height="60"/>
+                                                <rect key="frame" x="219.5" y="165.5" width="53" height="60"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="peU-dV-W6l">
                                                         <rect key="frame" x="9" y="4.5" width="35" height="35"/>
@@ -857,7 +857,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sXV-gn-mKy" userLabel="My Like Button View">
-                                                <rect key="frame" x="162" y="165.5" width="36" height="60"/>
+                                                <rect key="frame" x="158.5" y="165.5" width="36" height="60"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBg-Va-DyY">
                                                         <rect key="frame" x="0.5" y="4.5" width="35" height="35"/>
@@ -902,13 +902,13 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K4S-Rn-WFl" userLabel="Line">
                                                 <rect key="frame" x="0.0" y="256" width="414" height="2"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="gOj-g5-FDx"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UrC-U5-Gvg">
-                                                <rect key="frame" x="0.0" y="258" width="414" height="600"/>
+                                                <rect key="frame" x="0.0" y="273" width="414" height="600"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="600" id="Uzq-2Y-ELx"/>
@@ -943,10 +943,10 @@
                                             <constraint firstItem="ryf-tF-435" firstAttribute="top" secondItem="fTi-2n-HZn" secondAttribute="top" constant="136" id="9SH-DN-qJv"/>
                                             <constraint firstAttribute="trailing" secondItem="wcL-hk-80K" secondAttribute="trailing" constant="31" id="DMv-0P-hAj"/>
                                             <constraint firstItem="UrC-U5-Gvg" firstAttribute="leading" secondItem="fTi-2n-HZn" secondAttribute="leading" id="F1u-H5-8ij"/>
-                                            <constraint firstItem="UrC-U5-Gvg" firstAttribute="top" secondItem="K4S-Rn-WFl" secondAttribute="bottom" id="HlD-QU-fXa"/>
+                                            <constraint firstItem="UrC-U5-Gvg" firstAttribute="top" secondItem="K4S-Rn-WFl" secondAttribute="bottom" constant="15" id="HlD-QU-fXa"/>
                                             <constraint firstItem="fbY-bA-Mzh" firstAttribute="leading" secondItem="peO-dJ-MEY" secondAttribute="trailing" constant="20" id="Htb-3k-YMa"/>
                                             <constraint firstAttribute="trailing" secondItem="UrC-U5-Gvg" secondAttribute="trailing" id="IZD-7l-c3m"/>
-                                            <constraint firstItem="yCm-ho-XxV" firstAttribute="leading" secondItem="xUN-df-lGF" secondAttribute="trailing" constant="51" id="Kyl-m9-iA1"/>
+                                            <constraint firstItem="yCm-ho-XxV" firstAttribute="leading" secondItem="xUN-df-lGF" secondAttribute="trailing" multiplier="1.43" id="Kyl-m9-iA1"/>
                                             <constraint firstItem="xUN-df-lGF" firstAttribute="leading" secondItem="fTi-2n-HZn" secondAttribute="leading" constant="28" id="ObO-SO-V3G"/>
                                             <constraint firstItem="peO-dJ-MEY" firstAttribute="leading" secondItem="sXV-gn-mKy" secondAttribute="trailing" constant="25" id="QY3-NM-wrc"/>
                                             <constraint firstAttribute="trailing" secondItem="K4S-Rn-WFl" secondAttribute="trailing" id="W3q-t7-nF1"/>
@@ -983,6 +983,7 @@
                     <navigationItem key="navigationItem" id="5jg-1Z-Js9"/>
                     <connections>
                         <outlet property="myPagePagingView" destination="UrC-U5-Gvg" id="k3c-2t-n0d"/>
+                        <outlet property="scrollView" destination="r6i-bd-SX3" id="36R-uH-bN4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y6x-3Z-iDF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
