@@ -48,7 +48,8 @@ class MonthlyCalendarViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         let today = Date()
-//        self.calendarView.setDisplayDate(today)
+        
+        // 이번 달이면 자동으로 오늘 날짜 선택하게 바꾸기
         self.calendarView.selectDate(today)
     }
 }

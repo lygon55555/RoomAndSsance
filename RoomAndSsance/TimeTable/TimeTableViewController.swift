@@ -46,6 +46,8 @@ class TimeTableViewController: UIViewController {
         pagingViewController.borderOptions = .hidden
         pagingViewController.font = UIFont.systemFont(ofSize: 28, weight: .bold)
         pagingViewController.selectedFont = UIFont.systemFont(ofSize: 28, weight: .bold)
-        pagingViewController.menuItemSize = .fixed(width: UIScreen.main.bounds.width/2, height: 44)
+        pagingViewController.menuItemSize = .fixed(width: UIScreen.main.bounds.width*170/375, height: UIScreen.main.bounds.height*44/667)
+        pagingViewController.menuInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        pagingViewController.menuHorizontalAlignment = .center
     }
 }

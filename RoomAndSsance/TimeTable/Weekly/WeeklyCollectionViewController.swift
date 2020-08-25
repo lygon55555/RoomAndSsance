@@ -58,7 +58,7 @@ class WeeklyCollectionViewController: UICollectionViewController, HorizontalFloa
     //MARK: Delegate (HorizontalFloatingHeaderDelegate)
     //Item Size
     func collectionView(_ collectionView: UICollectionView, horizontalFloatingHeaderItemSizeAt indexPath: IndexPath) -> CGSize {
-        let height = UIScreen.main.bounds.height * 320 / 667
+        let height = UIScreen.main.bounds.height * 342 / 667
         return CGSize(width: 153, height: height)
     }
     
