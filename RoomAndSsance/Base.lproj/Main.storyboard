@@ -373,7 +373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcG-II-z9s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2148" y="933"/>
+            <point key="canvasLocation" x="2041" y="933"/>
         </scene>
         <!--강의 소개-->
         <scene sceneID="OMp-Mp-wT9">
@@ -400,7 +400,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ps-NI-pjx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2964" y="933"/>
+            <point key="canvasLocation" x="2857" y="933"/>
         </scene>
         <!--강의 일정-->
         <scene sceneID="seV-Tv-9Ol">
@@ -427,7 +427,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJr-nC-ogz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3751" y="933"/>
+            <point key="canvasLocation" x="3609" y="933"/>
         </scene>
         <!--강의 후기-->
         <scene sceneID="mnF-w6-xxJ">
@@ -454,7 +454,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6et-hR-fWJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4570" y="933"/>
+            <point key="canvasLocation" x="4329" y="933"/>
         </scene>
         <!--Time Table View Controller-->
         <scene sceneID="dyg-E6-Ew4">
@@ -510,7 +510,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AvQ-B8-zsV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2148" y="1667"/>
+            <point key="canvasLocation" x="2041" y="1667"/>
         </scene>
         <!--월간 시간표-->
         <scene sceneID="Yv1-x7-rzt">
@@ -525,7 +525,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Zd-La-WAu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2964" y="1667"/>
+            <point key="canvasLocation" x="2857" y="1667"/>
         </scene>
         <!--Weekly Collection View Controller-->
         <scene sceneID="n4S-rS-JId">
@@ -638,7 +638,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KaP-2k-LJ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3751" y="1667"/>
+            <point key="canvasLocation" x="3609" y="1667"/>
         </scene>
         <!--Monthly Calendar View Controller-->
         <scene sceneID="QAk-JU-Hxc">
@@ -670,7 +670,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NEw-nq-HZx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4571" y="1667"/>
+            <point key="canvasLocation" x="4329" y="1667"/>
         </scene>
         <!--Room Community View Controller-->
         <scene sceneID="L3v-9v-f5V">
@@ -684,12 +684,48 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RoomCommunityCell" rowHeight="172" id="mIy-dI-QYp" customClass="RoomCommunityTableViewCell" customModule="RoomAndSsance" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="172"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RoomCommunityCell" rowHeight="148" id="mIy-dI-QYp" customClass="RoomCommunityTableViewCell" customModule="RoomAndSsance" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="148"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mIy-dI-QYp" id="UKR-Qv-Lyw">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="172"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="148"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teacher" translatesAutoresizingMaskIntoConstraints="NO" id="8lR-tG-U2Y">
+                                                    <rect key="frame" x="33" y="24" width="45" height="45"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[공지] 세번째 수업 . 응용과정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnC-nd-zO6">
+                                                    <rect key="frame" x="87.5" y="37.5" width="174.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주번째 시간에 배웠던 스킬을 응용한 디자인을 할것입니다. 여러분이 그리고 싶은 도안을 가지고..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZF-Wa-IkK">
+                                                    <rect key="frame" x="87.5" y="72" width="300" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09. 11. 8:00." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcA-rW-SZF">
+                                                    <rect key="frame" x="87.5" y="124.5" width="74" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8lR-tG-U2Y" firstAttribute="top" secondItem="UKR-Qv-Lyw" secondAttribute="top" constant="24" id="3rz-nX-AJI"/>
+                                                <constraint firstItem="XnC-nd-zO6" firstAttribute="leading" secondItem="8lR-tG-U2Y" secondAttribute="trailing" multiplier="1.12" id="5Jr-5c-eqn"/>
+                                                <constraint firstItem="8lR-tG-U2Y" firstAttribute="leading" secondItem="UKR-Qv-Lyw" secondAttribute="leading" constant="33" id="6ZU-sZ-nHd"/>
+                                                <constraint firstItem="XnC-nd-zO6" firstAttribute="centerY" secondItem="8lR-tG-U2Y" secondAttribute="centerY" id="EHQ-4N-G2L"/>
+                                                <constraint firstItem="8lR-tG-U2Y" firstAttribute="width" secondItem="UKR-Qv-Lyw" secondAttribute="width" multiplier="0.108696" id="SnU-CW-HNC"/>
+                                                <constraint firstItem="8lR-tG-U2Y" firstAttribute="height" secondItem="UKR-Qv-Lyw" secondAttribute="height" multiplier="0.304054" id="XtA-UZ-DbQ"/>
+                                                <constraint firstItem="GZF-Wa-IkK" firstAttribute="top" secondItem="XnC-nd-zO6" secondAttribute="bottom" multiplier="1.3" id="Z4x-s6-MyE"/>
+                                                <constraint firstItem="HcA-rW-SZF" firstAttribute="leading" secondItem="GZF-Wa-IkK" secondAttribute="leading" id="aOp-G3-Iwb"/>
+                                                <constraint firstAttribute="trailing" secondItem="GZF-Wa-IkK" secondAttribute="trailing" multiplier="1.068" id="cL8-uX-tjj"/>
+                                                <constraint firstItem="HcA-rW-SZF" firstAttribute="top" secondItem="GZF-Wa-IkK" secondAttribute="bottom" multiplier="1.15" id="rP0-Hd-Ezu"/>
+                                                <constraint firstItem="GZF-Wa-IkK" firstAttribute="leading" secondItem="XnC-nd-zO6" secondAttribute="leading" id="s4b-0A-2up"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -710,7 +746,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZc-Lp-we5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5392.753623188406" y="1666.7410714285713"/>
+            <point key="canvasLocation" x="5101" y="1667"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0Sf-ap-x7b">
@@ -1245,7 +1281,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JzM-7q-caB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1972" y="3132"/>
+            <point key="canvasLocation" x="2041" y="3132"/>
         </scene>
         <!--마이 룸-->
         <scene sceneID="3wI-vq-gD1">
@@ -1655,7 +1691,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qev-rF-jyP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141" y="1667"/>
+            <point key="canvasLocation" x="245" y="1667"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V7H-GJ-FhG">
@@ -1692,6 +1728,7 @@
         <image name="setting" width="49" height="52"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="star" catalog="system" width="128" height="116"/>
+        <image name="teacher" width="564" height="562"/>
         <image name="write" width="75" height="70"/>
     </resources>
 </document>
