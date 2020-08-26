@@ -22,8 +22,6 @@ struct ImageItem: PagingItem, Hashable, Comparable {
 }
 
 class MyPageViewController: UIViewController {
-    
-    
     private let items = [
       ImageItem(
         index: 0,
@@ -56,12 +54,6 @@ class MyPageViewController: UIViewController {
         let scrapVC = storyboard.instantiateViewController(withIdentifier: "ScrapVC")
         let paymentVC = storyboard.instantiateViewController(withIdentifier: "PaymentVC")
         
-//        let pagingViewController = PagingViewController(viewControllers: [
-//            myRoomVC,
-//            scrapVC,
-//            paymentVC
-//        ])
-        
         let pagingViewController = PagingViewController()
         pagingViewController.register(MyPagePagingCell.self, for: ImageItem.self)
         
@@ -80,6 +72,14 @@ class MyPageViewController: UIViewController {
         pagingViewController.menuInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         pagingViewController.borderOptions = .hidden
     }
+    
+    @IBAction func chooseProfileImage(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = false
+        picker.delegate = self
+        self.present(picker, animated: true)
+    }
 }
 
 extension MyPageViewController: PagingViewControllerDataSource {
@@ -89,25 +89,27 @@ extension MyPageViewController: PagingViewControllerDataSource {
     
     func pagingViewController(_: PagingViewController, viewControllerAt index: Int) -> UIViewController {
 
-
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let myRoomVC = storyboard.instantiateViewController(withIdentifier: "MyRoomVC")
         let scrapVC = storyboard.instantiateViewController(withIdentifier: "ScrapVC")
         let paymentVC = storyboard.instantiateViewController(withIdentifier: "PaymentVC")
         
-        
-//        switch index {
-//        case 0: return myRoomVC
-//        case 1: return scrapVC
-//        case 2: return paymentVC
-//        default: break
-//        }
-        
-        return myRoomVC
+        switch index {
+        case 0: return myRoomVC
+        case 1: return scrapVC
+        case 2: return paymentVC
+        default: return myRoomVC
+        }
     }
     
     func pagingViewController(_: PagingViewController, pagingItemAt index: Int) -> PagingItem {
         return items[index]
+    }
+}
+
+extension MyPageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
     }
 }
 
