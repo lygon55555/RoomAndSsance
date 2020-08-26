@@ -13,4 +13,9 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         self.navigationController?.navigationBar.isHidden = true
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.setValue(false, forKey: "hidesShadow")
+    }
 }
