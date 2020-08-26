@@ -16,7 +16,7 @@ struct WeeklyPagingItem: PagingItem, Hashable, Comparable {
     let thisSun: String
     
     init(date: Date) {
-        let dateFormat = "MMM dd" // Date format
+        let dateFormat = "MM.dd" // Date format
         self.date = date
         self.thisMon = self.date.getWeekDates().thisWeek.first!.toDate(format: dateFormat)
         self.thisSun = self.date.getWeekDates().thisWeek[self.date.getWeekDates().thisWeek.count - 1].toDate(format: dateFormat)

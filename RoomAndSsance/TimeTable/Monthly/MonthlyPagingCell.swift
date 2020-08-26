@@ -57,7 +57,7 @@ class MonthlyPagingCell: PagingCell {
     override func setPagingItem(_ pagingItem: PagingItem, selected: Bool, options: PagingOptions) {
         self.options = options
         let calendarItem = pagingItem as! CalendarItem
-        monthYearLabel.text = calendarItem.monthText + " " + calendarItem.yearText
+        monthYearLabel.text = calendarItem.yearText + " - " + calendarItem.monthText
 
         updateSelectedState(selected: selected)
     }

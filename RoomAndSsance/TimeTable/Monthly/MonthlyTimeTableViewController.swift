@@ -21,7 +21,7 @@ struct CalendarItem: PagingItem, Hashable, Comparable {
 
     init(date: Date) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMM"
+        dateFormatter.dateFormat = "MM"
         
         self.date = date
         self.monthText = dateFormatter.string(from: date)
