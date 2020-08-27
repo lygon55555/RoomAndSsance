@@ -47,6 +47,9 @@ class ViewController: UIViewController {
     }
     
     func startAnimation() {
+        
+        //MARK: Bezier Path 사용해보기
+        
         for dotView in dotViews {
             dotView.layer.cornerRadius = dotView.frame.width / 2
             dotView.backgroundColor = UIColor.init(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.7)
