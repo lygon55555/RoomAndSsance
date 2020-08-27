@@ -22,6 +22,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if #available(iOS 13.0, *) {
             window?.overrideUserInterfaceStyle = .light
         }
+        
+//        UITabBar.appearance().barTintColor = UIColor.white
+//        UITabBar.appearance().backgroundColor = UIColor.white
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
