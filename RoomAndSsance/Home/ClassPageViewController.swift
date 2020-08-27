@@ -26,7 +26,7 @@ class ClassPageViewController: UIViewController {
         leftButton.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
         let leftBarButton = UIBarButtonItem(customView: leftButton)
         self.navigationItem.leftBarButtonItems = [leftBarButton]
-
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let classInfoVC = storyboard.instantiateViewController(withIdentifier: "ClassInfoVC")
         let classScheduleVC = storyboard.instantiateViewController(withIdentifier: "ClassScheduleVC")
@@ -57,6 +57,7 @@ class ClassPageViewController: UIViewController {
         pagingViewController.menuItemSize = .fixed(width: UIScreen.main.bounds.width*100/375, height: UIScreen.main.bounds.height*44/667)
         pagingViewController.menuInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         pagingViewController.menuHorizontalAlignment = .center
+        pagingViewController.borderOptions = .hidden
     }
     
     override func viewWillAppear(_ animated: Bool) {
