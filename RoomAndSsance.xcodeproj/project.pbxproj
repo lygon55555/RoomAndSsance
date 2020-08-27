@@ -39,6 +39,9 @@
 		C7D19E1924F38EAE006A6E3B /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D19E1824F38EAE006A6E3B /* PaymentViewController.swift */; };
 		C7D19E1D24F3A280006A6E3B /* RoomCommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D19E1C24F3A280006A6E3B /* RoomCommunityViewController.swift */; };
 		C7D19E2124F3A37D006A6E3B /* RoomCommunityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D19E2024F3A37D006A6E3B /* RoomCommunityTableViewCell.swift */; };
+		C7E631CE24F77C320018A531 /* ClassInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E631CD24F77C320018A531 /* ClassInfoViewController.swift */; };
+		C7E631D024F77C9E0018A531 /* ClassScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E631CF24F77C9E0018A531 /* ClassScheduleViewController.swift */; };
+		C7E631D224F77CBC0018A531 /* ClassReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E631D124F77CBC0018A531 /* ClassReviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +81,9 @@
 		C7D19E1824F38EAE006A6E3B /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		C7D19E1C24F3A280006A6E3B /* RoomCommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCommunityViewController.swift; sourceTree = "<group>"; };
 		C7D19E2024F3A37D006A6E3B /* RoomCommunityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCommunityTableViewCell.swift; sourceTree = "<group>"; };
+		C7E631CD24F77C320018A531 /* ClassInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassInfoViewController.swift; sourceTree = "<group>"; };
+		C7E631CF24F77C9E0018A531 /* ClassScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassScheduleViewController.swift; sourceTree = "<group>"; };
+		C7E631D124F77CBC0018A531 /* ClassReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassReviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,9 @@
 			children = (
 				C7D19E0624ECFC71006A6E3B /* HomeViewController.swift */,
 				C7D19E1024EFF039006A6E3B /* ClassPageViewController.swift */,
+				C7E631CD24F77C320018A531 /* ClassInfoViewController.swift */,
+				C7E631CF24F77C9E0018A531 /* ClassScheduleViewController.swift */,
+				C7E631D124F77CBC0018A531 /* ClassReviewViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -351,10 +360,13 @@
 				C7BA821424EBB48C00C2F739 /* ContentViewController.swift in Sources */,
 				C7BA820824EBA88E00C2F739 /* WeeklyTimeTableViewController.swift in Sources */,
 				C7BA820E24EBAE3E00C2F739 /* DateFormatters.swift in Sources */,
+				C7E631D224F77CBC0018A531 /* ClassReviewViewController.swift in Sources */,
 				C764505C24E27428005F654B /* AppDelegate.swift in Sources */,
 				C7D19E0324ECB25C006A6E3B /* ClassTableViewCell.swift in Sources */,
 				C7BA81FF24EBA27000C2F739 /* TimeTableViewController.swift in Sources */,
+				C7E631D024F77C9E0018A531 /* ClassScheduleViewController.swift in Sources */,
 				C7D19E1324F3401D006A6E3B /* WeeklyPagingCell.swift in Sources */,
+				C7E631CE24F77C320018A531 /* ClassInfoViewController.swift in Sources */,
 				C7D19E0124ECB24C006A6E3B /* WeeklyCollectionViewCell.swift in Sources */,
 				C7D19E0F24EE4D31006A6E3B /* MyPagePagingCell.swift in Sources */,
 				C7D19E1924F38EAE006A6E3B /* PaymentViewController.swift in Sources */,

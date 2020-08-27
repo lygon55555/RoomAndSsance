@@ -49,11 +49,6 @@ class MyPageViewController: UIViewController {
     override func viewDidLoad() {
         self.navigationController?.navigationBar.isHidden = true
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let myRoomVC = storyboard.instantiateViewController(withIdentifier: "MyRoomVC")
-        let scrapVC = storyboard.instantiateViewController(withIdentifier: "ScrapVC")
-        let paymentVC = storyboard.instantiateViewController(withIdentifier: "PaymentVC")
-        
         let pagingViewController = PagingViewController()
         pagingViewController.register(MyPagePagingCell.self, for: ImageItem.self)
         
