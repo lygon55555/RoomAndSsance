@@ -1059,9 +1059,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="5jg-1Z-Js9"/>
                     <connections>
-                        <outlet property="bottomViewHeight" destination="Uzq-2Y-ELx" id="pdD-wW-7ja"/>
                         <outlet property="myPagePagingView" destination="UrC-U5-Gvg" id="k3c-2t-n0d"/>
-                        <outlet property="scrollView" destination="r6i-bd-SX3" id="36R-uH-bN4"/>
+                        <outlet property="pagingViewHeight" destination="Uzq-2Y-ELx" id="RFO-rp-Yqe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y6x-3Z-iDF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

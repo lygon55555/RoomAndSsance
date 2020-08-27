@@ -44,8 +44,7 @@ class MyPageViewController: UIViewController {
     ]
     
     @IBOutlet var myPagePagingView: UIView!
-    @IBOutlet var scrollView: UIScrollView!
-    @IBOutlet var bottomViewHeight: NSLayoutConstraint!
+    @IBOutlet var pagingViewHeight: NSLayoutConstraint!
     
     let mainstoryboard = UIStoryboard(name: "Main", bundle: nil)
     lazy var myRoomVC = mainstoryboard.instantiateViewController(withIdentifier: "MyRoomVC") as! MyRoomViewController
@@ -73,22 +72,10 @@ class MyPageViewController: UIViewController {
         pagingViewController.delegate = self
         pagingViewController.menuInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         pagingViewController.borderOptions = .hidden
-        
-        
-
-        
-        
-//        myRoomVC.myRoomTableView.isScrollEnabled = false
-//        scrapVC.scrapTableView.isScrollEnabled = false
-//        paymentVC.paymentTableView.isScrollEnabled = false
-//        self.scrollView.bounces = false
-//        myRoomVC.myRoomTableView.bounces = true
-//        scrapVC.scrapTableView.isScrollEnabled = true
-//        paymentVC.paymentTableView.isScrollEnabled = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        bottomViewHeight.constant = myRoomVC.myRoomTableView.contentSize.height + 20
+        pagingViewHeight.constant = myRoomVC.myRoomTableView.contentSize.height + 20
     }
     
     @IBAction func chooseProfileImage(_ sender: Any) {
@@ -125,22 +112,22 @@ extension MyPageViewController: PagingViewControllerDelegate {
         if transitionSuccessful {
             if startingViewController is MyRoomViewController {
                 if destinationViewController is ScrapViewController {
-                    bottomViewHeight.constant = scrapVC.scrapTableView.contentSize.height + 20
+                    pagingViewHeight.constant = scrapVC.scrapTableView.contentSize.height + 20
                 }
             }
             
             if startingViewController is PaymentViewController {
                 if destinationViewController is ScrapViewController {
-                    bottomViewHeight.constant = scrapVC.scrapTableView.contentSize.height + 20
+                    pagingViewHeight.constant = scrapVC.scrapTableView.contentSize.height + 20
                 }
             }
             
             if startingViewController is ScrapViewController {
                 if destinationViewController is MyRoomViewController {
-                    bottomViewHeight.constant = myRoomVC.myRoomTableView.contentSize.height + 20
+                    pagingViewHeight.constant = myRoomVC.myRoomTableView.contentSize.height + 20
                 }
                 else {
-                    bottomViewHeight.constant = paymentVC.paymentTableView.contentSize.height + 20
+                    pagingViewHeight.constant = paymentVC.paymentTableView.contentSize.height + 20
                 }
             }
         }
@@ -151,8 +138,4 @@ extension MyPageViewController: UIImagePickerControllerDelegate, UINavigationCon
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
     }
-}
-
-extension MyPageViewController: UIScrollViewDelegate {
-    
 }
