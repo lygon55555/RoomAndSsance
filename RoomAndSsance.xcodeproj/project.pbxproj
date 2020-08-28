@@ -155,6 +155,7 @@
 		C7BA820024EBA60700C2F739 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C7BA820D24EBAE3E00C2F739 /* DateFormatters.swift */,
 				C7BA820124EBA61A00C2F739 /* HorizontalFloatingHeaderLayout.swift */,
 				C7BA821324EBB48C00C2F739 /* ContentViewController.swift */,
 				C7BA820B24EBAA3B00C2F739 /* UIView+constraints.swift */,
@@ -183,7 +184,6 @@
 				C7D19E2024F3A37D006A6E3B /* RoomCommunityTableViewCell.swift */,
 				C7BA821D24EBBF0A00C2F739 /* Weekly */,
 				C7BA821E24EBBF1400C2F739 /* Monthly */,
-				C7BA820D24EBAE3E00C2F739 /* DateFormatters.swift */,
 			);
 			path = TimeTable;
 			sourceTree = "<group>";
