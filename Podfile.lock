@@ -2,29 +2,21 @@ PODS:
   - KDCalendar (1.8.9):
     - KDCalendar/EventManager (= 1.8.9)
   - KDCalendar/EventManager (1.8.9)
-  - Pageboy (3.6.1)
   - Parchment (2.4.0)
-  - Tabman (2.9.1):
-    - Pageboy (~> 3.6.0)
 
 DEPENDENCIES:
-  - KDCalendar (~> 1.8.9)
+  - KDCalendar
   - Parchment
-  - Tabman (~> 2.9)
 
 SPEC REPOS:
   trunk:
     - KDCalendar
-    - Pageboy
     - Parchment
-    - Tabman
 
 SPEC CHECKSUMS:
   KDCalendar: a587bc486b992d82ef94bd04001fce9baf45e518
-  Pageboy: 29a2d474ad99404b4d77f325e0ab6d705930a4fb
   Parchment: 002785473861582385db5c6725165353c500198e
-  Tabman: 085d89c65be9e883629bdaf5b1453a6397e57846
 
-PODFILE CHECKSUM: 632364c0e29d0ab7c99910e5bd34972ba76ab90b
+PODFILE CHECKSUM: 8e6b63c61c4d3884c2e369ad0e7de99b83468948
 
 COCOAPODS: 1.9.0

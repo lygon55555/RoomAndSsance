@@ -40,4 +40,10 @@ struct DateFormatters {
         dateFormatter.dateFormat = "y"
         return dateFormatter
     }()
+    
+    static var numberMonthFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM"
+        return dateFormatter
+    }()
 }
