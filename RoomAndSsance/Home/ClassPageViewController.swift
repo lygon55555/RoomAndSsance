@@ -12,13 +12,14 @@ import Parchment
 
 class ClassPageViewController: UIViewController {
     
+    @IBOutlet var classBackgroundView: UIView!
+    @IBOutlet var classBackgroundImageView: UIImageView!
     @IBOutlet var bottomPagingView: UIView!
     
     override func viewDidLoad() {
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 241/255, green: 243/255, blue: 248/255, alpha: 1.0)
         
         let leftButton = UIButton(type: UIButton.ButtonType.custom)
         leftButton.setImage(UIImage(named: "back"), for: .normal)
@@ -63,13 +64,53 @@ class ClassPageViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        
+//        self.classBackgroundView.topAnchor.constraint(equalTo: self.classBackgroundView.superview!.topAnchor, constant: self.topbarHeight*(-1)).isActive = true
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
+        
+        self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+        self.navigationController?.navigationBar.shadowImage = nil
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let topSafeArea: CGFloat
+        let bottomSafeArea: CGFloat
+
+        if #available(iOS 11.0, *) {
+            topSafeArea = view.safeAreaInsets.top
+            bottomSafeArea = view.safeAreaInsets.bottom
+        } else {
+            topSafeArea = topLayoutGuide.length
+            bottomSafeArea = bottomLayoutGuide.length
+        }
+
+        // safe area values are now available to use
+        
+        
+        self.classBackgroundView.topAnchor.constraint(equalTo: self.classBackgroundView.superview!.topAnchor, constant: topSafeArea*(-1)).isActive = true
     }
     
     @objc func goBack() {
         self.navigationController?.popViewController(animated: true)
+    }
+}
+
+extension UIViewController {
+
+    /**
+     *  Height of status bar + navigation bar (if navigation bar exist)
+     */
+
+    var topbarHeight: CGFloat {
+        return (view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0.0) +
+            (self.navigationController?.navigationBar.frame.height ?? 0.0)
     }
 }
