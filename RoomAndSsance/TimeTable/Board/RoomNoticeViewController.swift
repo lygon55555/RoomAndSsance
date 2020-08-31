@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 class RoomNoticeViewController: UIViewController {
-    @IBOutlet var communityTableView: UITableView!
+    @IBOutlet var noticeTableView: UITableView!
     
     override func viewDidLoad() {
-        communityTableView.delegate = self
-        communityTableView.dataSource = self
+        noticeTableView.delegate = self
+        noticeTableView.dataSource = self
     }
 }
 
