@@ -36,7 +36,6 @@ class BoardViewController: UIViewController {
             
         addChild(pagingViewController)
         boardView.addSubview(pagingViewController.view)
-        pagingViewController.view.translatesAutoresizingMaskIntoConstraints = false
         boardView.constrainToEdges(pagingViewController.view)
         pagingViewController.didMove(toParent: self)
         pagingViewController.menuHorizontalAlignment = .center
