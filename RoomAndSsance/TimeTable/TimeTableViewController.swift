@@ -16,9 +16,9 @@ class TimeTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.navigationController?.navigationBar.isHidden = true
-        
+
         // Load each of the view controllers you want to embed
         // from the storyboard.
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -49,5 +49,9 @@ class TimeTableViewController: UIViewController {
         pagingViewController.menuItemSize = .fixed(width: UIScreen.main.bounds.width*170/375, height: UIScreen.main.bounds.height*44/667)
         pagingViewController.menuInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
         pagingViewController.menuHorizontalAlignment = .center
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
     }
 }

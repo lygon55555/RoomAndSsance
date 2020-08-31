@@ -14,6 +14,9 @@ class WeeklyCollectionViewController: UICollectionViewController, HorizontalFloa
     //MARK: - Configure methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.isHidden = true
+
         configure()
     }
     

@@ -14,6 +14,8 @@
 		C764506324E27428005F654B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C764506124E27428005F654B /* Main.storyboard */; };
 		C764506524E27429005F654B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C764506424E27429005F654B /* Assets.xcassets */; };
 		C764506824E27429005F654B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C764506624E27429005F654B /* LaunchScreen.storyboard */; };
+		C796ABBB24FC7B6D000A2EC5 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C796ABBA24FC7B6D000A2EC5 /* BoardViewController.swift */; };
+		C796ABBD24FC7CA1000A2EC5 /* RoomCommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C796ABBC24FC7CA1000A2EC5 /* RoomCommunityViewController.swift */; };
 		C7BA81FF24EBA27000C2F739 /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA81FE24EBA27000C2F739 /* TimeTableViewController.swift */; };
 		C7BA820224EBA61A00C2F739 /* HorizontalFloatingHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA820124EBA61A00C2F739 /* HorizontalFloatingHeaderLayout.swift */; };
 		C7BA820824EBA88E00C2F739 /* WeeklyTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA820724EBA88E00C2F739 /* WeeklyTimeTableViewController.swift */; };
@@ -37,8 +39,8 @@
 		C7D19E1524F38E9D006A6E3B /* MyRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D19E1424F38E9D006A6E3B /* MyRoomViewController.swift */; };
 		C7D19E1724F38EA6006A6E3B /* ScrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D19E1624F38EA6006A6E3B /* ScrapViewController.swift */; };
 		C7D19E1924F38EAE006A6E3B /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D19E1824F38EAE006A6E3B /* PaymentViewController.swift */; };
-		C7D19E1D24F3A280006A6E3B /* RoomCommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D19E1C24F3A280006A6E3B /* RoomCommunityViewController.swift */; };
-		C7D19E2124F3A37D006A6E3B /* RoomCommunityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D19E2024F3A37D006A6E3B /* RoomCommunityTableViewCell.swift */; };
+		C7D19E1D24F3A280006A6E3B /* RoomNoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D19E1C24F3A280006A6E3B /* RoomNoticeViewController.swift */; };
+		C7D19E2124F3A37D006A6E3B /* RoomNoticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D19E2024F3A37D006A6E3B /* RoomNoticeTableViewCell.swift */; };
 		C7E631CE24F77C320018A531 /* ClassInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E631CD24F77C320018A531 /* ClassInfoViewController.swift */; };
 		C7E631D024F77C9E0018A531 /* ClassScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E631CF24F77C9E0018A531 /* ClassScheduleViewController.swift */; };
 		C7E631D224F77CBC0018A531 /* ClassReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E631D124F77CBC0018A531 /* ClassReviewViewController.swift */; };
@@ -56,6 +58,8 @@
 		C764506424E27429005F654B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C764506724E27429005F654B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C764506924E27429005F654B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C796ABBA24FC7B6D000A2EC5 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		C796ABBC24FC7CA1000A2EC5 /* RoomCommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCommunityViewController.swift; sourceTree = "<group>"; };
 		C7BA81FE24EBA27000C2F739 /* TimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
 		C7BA820124EBA61A00C2F739 /* HorizontalFloatingHeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalFloatingHeaderLayout.swift; sourceTree = "<group>"; };
 		C7BA820724EBA88E00C2F739 /* WeeklyTimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyTimeTableViewController.swift; sourceTree = "<group>"; };
@@ -79,8 +83,8 @@
 		C7D19E1424F38E9D006A6E3B /* MyRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRoomViewController.swift; sourceTree = "<group>"; };
 		C7D19E1624F38EA6006A6E3B /* ScrapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrapViewController.swift; sourceTree = "<group>"; };
 		C7D19E1824F38EAE006A6E3B /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
-		C7D19E1C24F3A280006A6E3B /* RoomCommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCommunityViewController.swift; sourceTree = "<group>"; };
-		C7D19E2024F3A37D006A6E3B /* RoomCommunityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCommunityTableViewCell.swift; sourceTree = "<group>"; };
+		C7D19E1C24F3A280006A6E3B /* RoomNoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNoticeViewController.swift; sourceTree = "<group>"; };
+		C7D19E2024F3A37D006A6E3B /* RoomNoticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNoticeTableViewCell.swift; sourceTree = "<group>"; };
 		C7E631CD24F77C320018A531 /* ClassInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassInfoViewController.swift; sourceTree = "<group>"; };
 		C7E631CF24F77C9E0018A531 /* ClassScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassScheduleViewController.swift; sourceTree = "<group>"; };
 		C7E631D124F77CBC0018A531 /* ClassReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassReviewViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +156,17 @@
 			path = RoomAndSsance;
 			sourceTree = "<group>";
 		};
+		C796ABB924FC7B5A000A2EC5 /* Board */ = {
+			isa = PBXGroup;
+			children = (
+				C796ABBA24FC7B6D000A2EC5 /* BoardViewController.swift */,
+				C7D19E1C24F3A280006A6E3B /* RoomNoticeViewController.swift */,
+				C7D19E2024F3A37D006A6E3B /* RoomNoticeTableViewCell.swift */,
+				C796ABBC24FC7CA1000A2EC5 /* RoomCommunityViewController.swift */,
+			);
+			path = Board;
+			sourceTree = "<group>";
+		};
 		C7BA820024EBA60700C2F739 /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,10 +195,9 @@
 			isa = PBXGroup;
 			children = (
 				C7BA81FE24EBA27000C2F739 /* TimeTableViewController.swift */,
-				C7D19E1C24F3A280006A6E3B /* RoomCommunityViewController.swift */,
-				C7D19E2024F3A37D006A6E3B /* RoomCommunityTableViewCell.swift */,
 				C7BA821D24EBBF0A00C2F739 /* Weekly */,
 				C7BA821E24EBBF1400C2F739 /* Monthly */,
+				C796ABB924FC7B5A000A2EC5 /* Board */,
 			);
 			path = TimeTable;
 			sourceTree = "<group>";
@@ -348,12 +362,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7BA820A24EBA89500C2F739 /* MonthlyTimeTableViewController.swift in Sources */,
-				C7D19E2124F3A37D006A6E3B /* RoomCommunityTableViewCell.swift in Sources */,
+				C7D19E2124F3A37D006A6E3B /* RoomNoticeTableViewCell.swift in Sources */,
 				C7D19E0B24EDFC8D006A6E3B /* MyPageViewController.swift in Sources */,
 				C7BA821024EBB03200C2F739 /* MonthlyPagingCell.swift in Sources */,
+				C796ABBB24FC7B6D000A2EC5 /* BoardViewController.swift in Sources */,
 				C7D19E1124EFF039006A6E3B /* ClassPageViewController.swift in Sources */,
 				C7D19E0524ECB7DA006A6E3B /* MonthlyCalendarViewController.swift in Sources */,
-				C7D19E1D24F3A280006A6E3B /* RoomCommunityViewController.swift in Sources */,
+				C7D19E1D24F3A280006A6E3B /* RoomNoticeViewController.swift in Sources */,
 				C7D19E0724ECFC71006A6E3B /* HomeViewController.swift in Sources */,
 				C7BA821224EBB05700C2F739 /* UIColor+interpolation.swift in Sources */,
 				C764506024E27428005F654B /* ViewController.swift in Sources */,
@@ -369,6 +384,7 @@
 				C7E631CE24F77C320018A531 /* ClassInfoViewController.swift in Sources */,
 				C7D19E0124ECB24C006A6E3B /* WeeklyCollectionViewCell.swift in Sources */,
 				C7D19E0F24EE4D31006A6E3B /* MyPagePagingCell.swift in Sources */,
+				C796ABBD24FC7CA1000A2EC5 /* RoomCommunityViewController.swift in Sources */,
 				C7D19E1924F38EAE006A6E3B /* PaymentViewController.swift in Sources */,
 				C7D19DFF24ECB242006A6E3B /* WeeklyCollectionViewController.swift in Sources */,
 				C764505E24E27428005F654B /* SceneDelegate.swift in Sources */,
