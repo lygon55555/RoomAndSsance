@@ -49,6 +49,9 @@ class TimeTableViewController: UIViewController {
         pagingViewController.menuItemSize = .fixed(width: UIScreen.main.bounds.width*170/375, height: UIScreen.main.bounds.height*44/667)
         pagingViewController.menuInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
         pagingViewController.menuHorizontalAlignment = .center
+        pagingViewController.indicatorOptions = .visible(height: 5, zIndex: 0,
+                                                            spacing: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10),
+                                                            insets: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10))
     }
     
     override func viewWillAppear(_ animated: Bool) {

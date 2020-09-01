@@ -43,7 +43,6 @@ class BoardViewController: UIViewController {
         pagingViewController.menuInteraction = .none
         pagingViewController.textColor = UIColor(red: 0.733, green: 0.733, blue: 0.733, alpha: 1)
         pagingViewController.selectedTextColor = UIColor(red: 0.267, green: 0.267, blue: 0.267, alpha: 1)
-        pagingViewController.borderOptions = .hidden
         pagingViewController.font = UIFont.systemFont(ofSize: 28, weight: .bold)
         pagingViewController.selectedFont = UIFont.systemFont(ofSize: 28, weight: .bold)
         pagingViewController.menuItemSize = .fixed(width: UIScreen.main.bounds.width*170/375, height: UIScreen.main.bounds.height*65/667)
@@ -52,6 +51,9 @@ class BoardViewController: UIViewController {
         pagingViewController.backgroundColor = UIColor.init(red: 246/255, green: 246/255, blue: 246/255, alpha: 1.0)
         pagingViewController.menuBackgroundColor = UIColor.init(red: 246/255, green: 246/255, blue: 246/255, alpha: 1.0)
         pagingViewController.selectedBackgroundColor = UIColor.init(red: 246/255, green: 246/255, blue: 246/255, alpha: 1.0)
+        pagingViewController.indicatorOptions = .visible(height: 5, zIndex: 0,
+                                                         spacing: UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20),
+                                                         insets: UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20))
     }
 
     override func viewWillAppear(_ animated: Bool) {
