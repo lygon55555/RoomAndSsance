@@ -12,6 +12,7 @@
 		C738166824FCF08E00C34B8B /* HistoryPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738166724FCF08E00C34B8B /* HistoryPostViewController.swift */; };
 		C738166A24FCF0A000C34B8B /* HistoryCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738166924FCF0A000C34B8B /* HistoryCommentViewController.swift */; };
 		C738166C24FCF0B100C34B8B /* HistoryLikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738166B24FCF0B100C34B8B /* HistoryLikeViewController.swift */; };
+		C738166E24FDCF2700C34B8B /* HistoryPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738166D24FDCF2700C34B8B /* HistoryPostTableViewCell.swift */; };
 		C752854624FCC68700B37E5D /* RoomCommunityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C752854524FCC68700B37E5D /* RoomCommunityTableViewCell.swift */; };
 		C764505C24E27428005F654B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C764505B24E27428005F654B /* AppDelegate.swift */; };
 		C764505E24E27428005F654B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C764505D24E27428005F654B /* SceneDelegate.swift */; };
@@ -59,6 +60,7 @@
 		C738166724FCF08E00C34B8B /* HistoryPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPostViewController.swift; sourceTree = "<group>"; };
 		C738166924FCF0A000C34B8B /* HistoryCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCommentViewController.swift; sourceTree = "<group>"; };
 		C738166B24FCF0B100C34B8B /* HistoryLikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryLikeViewController.swift; sourceTree = "<group>"; };
+		C738166D24FDCF2700C34B8B /* HistoryPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPostTableViewCell.swift; sourceTree = "<group>"; };
 		C752854524FCC68700B37E5D /* RoomCommunityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCommunityTableViewCell.swift; sourceTree = "<group>"; };
 		C764505824E27428005F654B /* RoomAndSsance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoomAndSsance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C764505B24E27428005F654B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				C738166324FCEF9B00C34B8B /* HistoryViewController.swift */,
 				C738166724FCF08E00C34B8B /* HistoryPostViewController.swift */,
+				C738166D24FDCF2700C34B8B /* HistoryPostTableViewCell.swift */,
 				C738166924FCF0A000C34B8B /* HistoryCommentViewController.swift */,
 				C738166B24FCF0B100C34B8B /* HistoryLikeViewController.swift */,
 			);
@@ -436,6 +439,7 @@
 				C738166424FCEF9B00C34B8B /* HistoryViewController.swift in Sources */,
 				C764505C24E27428005F654B /* AppDelegate.swift in Sources */,
 				C7D19E0324ECB25C006A6E3B /* ClassTableViewCell.swift in Sources */,
+				C738166E24FDCF2700C34B8B /* HistoryPostTableViewCell.swift in Sources */,
 				C7BA81FF24EBA27000C2F739 /* TimeTableViewController.swift in Sources */,
 				C7E631D024F77C9E0018A531 /* ClassScheduleViewController.swift in Sources */,
 				C7D19E1324F3401D006A6E3B /* WeeklyPagingCell.swift in Sources */,
