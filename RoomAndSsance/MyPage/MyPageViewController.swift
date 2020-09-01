@@ -72,6 +72,9 @@ class MyPageViewController: UIViewController {
         pagingViewController.delegate = self
         pagingViewController.menuInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         pagingViewController.borderOptions = .hidden
+        pagingViewController.indicatorOptions = .visible(height: 4, zIndex: 0,
+                                                            spacing: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10),
+                                                            insets: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10))
     }
     
     override func viewWillAppear(_ animated: Bool) {
