@@ -50,11 +50,11 @@ class MyPageViewController: UIViewController {
     lazy var myRoomVC = mainstoryboard.instantiateViewController(withIdentifier: "MyRoomVC") as! MyRoomViewController
     lazy var scrapVC = mainstoryboard.instantiateViewController(withIdentifier: "ScrapVC") as! ScrapViewController
     lazy var paymentVC = mainstoryboard.instantiateViewController(withIdentifier: "PaymentVC") as! PaymentViewController
-    
+    let pagingViewController = PagingViewController()
+
     override func viewDidLoad() {
         self.navigationController?.navigationBar.isHidden = true
         
-        let pagingViewController = PagingViewController()
         pagingViewController.register(MyPagePagingCell.self, for: ImageItem.self)
         
         addChild(pagingViewController)
@@ -74,8 +74,19 @@ class MyPageViewController: UIViewController {
         pagingViewController.borderOptions = .hidden
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
-        pagingViewHeight.constant = myRoomVC.myRoomTableView.contentSize.height + 20
+        // 다른 탭 다녀오면 계속 실행됨
+        // 다른 탭으로 이동할 때 height 기억하게 로직 수정
+        
+        pagingViewHeight.constant = myRoomVC.myRoomTableView.contentSize.height + 75
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     @IBAction func chooseProfileImage(_ sender: Any) {
@@ -84,6 +95,24 @@ class MyPageViewController: UIViewController {
         picker.allowsEditing = false
         picker.delegate = self
         self.present(picker, animated: true)
+    }
+    
+    @IBAction func showHistoryPost(_ sender: Any) {
+        let vc = HistoryViewController(nibName: nil, bundle: nil)
+        vc.pageIndex = 0
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func showHistoryComment(_ sender: Any) {
+        let vc = HistoryViewController()
+        vc.pageIndex = 1
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func showHistoryLike(_ sender: Any) {
+        let vc = HistoryViewController()
+        vc.pageIndex = 2
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -112,22 +141,28 @@ extension MyPageViewController: PagingViewControllerDelegate {
         if transitionSuccessful {
             if startingViewController is MyRoomViewController {
                 if destinationViewController is ScrapViewController {
-                    pagingViewHeight.constant = scrapVC.scrapTableView.contentSize.height + 20
+                    pagingViewHeight.constant = scrapVC.scrapTableView.contentSize.height + 75
+                }
+                else {
+                    pagingViewHeight.constant = paymentVC.paymentTableView.contentSize.height + 75
                 }
             }
             
             if startingViewController is PaymentViewController {
                 if destinationViewController is ScrapViewController {
-                    pagingViewHeight.constant = scrapVC.scrapTableView.contentSize.height + 20
+                    pagingViewHeight.constant = scrapVC.scrapTableView.contentSize.height + 75
+                }
+                else {
+                    pagingViewHeight.constant = myRoomVC.myRoomTableView.contentSize.height + 75
                 }
             }
             
             if startingViewController is ScrapViewController {
                 if destinationViewController is MyRoomViewController {
-                    pagingViewHeight.constant = myRoomVC.myRoomTableView.contentSize.height + 20
+                    pagingViewHeight.constant = myRoomVC.myRoomTableView.contentSize.height + 75
                 }
                 else {
-                    pagingViewHeight.constant = paymentVC.paymentTableView.contentSize.height + 20
+                    pagingViewHeight.constant = paymentVC.paymentTableView.contentSize.height + 75
                 }
             }
         }
@@ -136,6 +171,6 @@ extension MyPageViewController: PagingViewControllerDelegate {
 
 extension MyPageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
+        // 선택한 사진을 프사로 등록하는 로직 구현
     }
 }
