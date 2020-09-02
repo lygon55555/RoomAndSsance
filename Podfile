@@ -7,6 +7,7 @@ target 'RoomAndSsance' do
 
 	pod 'Parchment'
 	pod 'KDCalendar'	
+    pod 'SendBirdUIKit'
   
   # Pods for RoomAndSsance
 

@@ -3,20 +3,28 @@ PODS:
     - KDCalendar/EventManager (= 1.8.9)
   - KDCalendar/EventManager (1.8.9)
   - Parchment (2.4.0)
+  - SendBirdSDK (3.0.200)
+  - SendBirdUIKit (1.2.0):
+    - SendBirdSDK (~> 3.0.200)
 
 DEPENDENCIES:
   - KDCalendar
   - Parchment
+  - SendBirdUIKit
 
 SPEC REPOS:
   trunk:
     - KDCalendar
     - Parchment
+    - SendBirdSDK
+    - SendBirdUIKit
 
 SPEC CHECKSUMS:
   KDCalendar: a587bc486b992d82ef94bd04001fce9baf45e518
   Parchment: 002785473861582385db5c6725165353c500198e
+  SendBirdSDK: b907652b5392b93bd9b7dbf5a0527a374db35ccc
+  SendBirdUIKit: 564708d69c7f5b2e450426cfc7639e60f4283bbb
 
-PODFILE CHECKSUM: 8e6b63c61c4d3884c2e369ad0e7de99b83468948
+PODFILE CHECKSUM: 707f747ca608cb25e24f06ebdbda01fdc3986012
 
 COCOAPODS: 1.9.0
