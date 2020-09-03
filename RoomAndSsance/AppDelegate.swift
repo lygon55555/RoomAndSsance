@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SendBirdUIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        SBUMain.initialize(applicationId: "2D7B4CDB-932F-4082-9B09-A1153792DC8D")
+        SBUGlobals.CurrentUser = SBUUser(userId: "test")
+        SBUMain.connect { _,_  in }
+        
+        
         return true
     }
 
