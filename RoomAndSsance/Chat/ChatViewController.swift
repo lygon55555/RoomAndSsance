@@ -13,6 +13,7 @@ import SendBirdUIKit
 class ChatViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         SBUMain.connect { _,_  in
+            
             SBUStringSet.ChannelList_Header_Title = "채팅"
             SBUStringSet.OK = "확인"
             SBUStringSet.Invite = "초대"
@@ -21,7 +22,7 @@ class ChatViewController: UIViewController {
             SBUStringSet.Document = "파일"
             SBUStringSet.ChannelSettings_Notifications = "알림"
             SBUStringSet.ChannelSettings_Members_Title = "대화 상대"
-            SBUStringSet.ChannelSettings_Leave = "대화 나가기"
+            SBUStringSet.ChannelSettings_Leave = "채팅방 나가기"
             SBUStringSet.Edit = "설정"
             SBUStringSet.ChannelSettings_Change_Name = "채팅방 이름 변경"
             SBUStringSet.ChannelSettings_Change_Image = "체팅방 이미지 변경"
@@ -56,6 +57,34 @@ class ChatViewController: UIViewController {
             SBUStringSet.MemberList_Promote_Operator = "관리자 위임"
             SBUStringSet.MemberList_Unban = "강퇴 취소"
             SBUStringSet.Channel_Name_No_Members = "대화 상대 없음"
+            SBUStringSet.InviteChannel_Header_Select_Members = "새 관리자 선택"
+            
+            SBUStringSet.CreateChannel_Create = { count in
+                switch count {
+                case 0:
+                    return "선택"
+                default:
+                    return "\(count) 선택"
+                }
+            }
+            
+            SBUStringSet.InviteChannel_Add = { count in
+                switch count {
+                case 0:
+                    return "추가"
+                default:
+                    return "\(count) 추가"
+                }
+            }
+            
+            SBUStringSet.InviteChannel_Invite = { count in
+               switch count {
+               case 0:
+                   return "초대"
+               default:
+                   return "\(count) 초대"
+               }
+            }
             
             let mainVC = CustomChannelListViewController()
             mainVC.leftBarButton = nil
