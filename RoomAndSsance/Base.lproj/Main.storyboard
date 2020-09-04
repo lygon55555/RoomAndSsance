@@ -2605,7 +2605,9 @@
         <scene sceneID="SGJ-10-zdU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="62M-4Q-8TG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="mypage0" selectedImage="mypage1" id="QHL-No-Prc"/>
+                    <tabBarItem key="tabBarItem" title="" image="mypage0" selectedImage="mypage1" id="QHL-No-Prc">
+                        <inset key="imageInsets" minX="5" minY="10" maxX="5" maxY="10"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OtQ-Zc-PKo">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -2810,7 +2812,9 @@
         <scene sceneID="V7H-GJ-FhG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="07e-JP-ejx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="home0" selectedImage="home1" id="tyr-JG-4Sq"/>
+                    <tabBarItem key="tabBarItem" title="" image="home0" selectedImage="home1" id="tyr-JG-4Sq">
+                        <inset key="imageInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LpS-CT-GFh">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -2847,7 +2851,9 @@
         <scene sceneID="8D7-zp-HoE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JfJ-Fi-lFQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="timetable0" selectedImage="timetable1" id="DWZ-DO-ExL"/>
+                    <tabBarItem key="tabBarItem" title="" image="timetable0" selectedImage="timetable1" id="DWZ-DO-ExL">
+                        <inset key="imageInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SLa-mF-9cd">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -2866,7 +2872,9 @@
         <scene sceneID="1Ws-v8-qD0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AUZ-eI-eNU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="chat0" selectedImage="chat1" id="Y9m-lk-IXK"/>
+                    <tabBarItem key="tabBarItem" title="" image="chat0" selectedImage="chat1" id="Y9m-lk-IXK">
+                        <inset key="imageInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gS7-pS-HgV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -2886,17 +2894,17 @@
         <image name="bell.fill" catalog="system" width="128" height="124"/>
         <image name="camera" catalog="system" width="128" height="96"/>
         <image name="camera0" width="45" height="44"/>
-        <image name="chat0" width="28" height="25"/>
-        <image name="chat1" width="28" height="25"/>
+        <image name="chat0" width="52" height="50"/>
+        <image name="chat1" width="52" height="50"/>
         <image name="comment" width="75" height="70"/>
         <image name="heart" catalog="system" width="128" height="109"/>
-        <image name="home0" width="27" height="25"/>
-        <image name="home1" width="28" height="25"/>
+        <image name="home0" width="52" height="49"/>
+        <image name="home1" width="52" height="49"/>
         <image name="like" width="75" height="70"/>
         <image name="lock0" width="40" height="44"/>
         <image name="member0" width="92" height="62"/>
-        <image name="mypage0" width="22" height="27"/>
-        <image name="mypage1" width="20" height="25"/>
+        <image name="mypage0" width="41" height="51"/>
+        <image name="mypage1" width="41" height="51"/>
         <image name="ready2" width="68" height="63"/>
         <image name="sample0" width="828" height="588"/>
         <image name="schedule0" width="66" height="66"/>
@@ -2906,8 +2914,8 @@
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="teacher" width="564" height="562"/>
         <image name="time0" width="66" height="66"/>
-        <image name="timetable0" width="26" height="25"/>
-        <image name="timetable1" width="26" height="25"/>
+        <image name="timetable0" width="52" height="50"/>
+        <image name="timetable1" width="52" height="50"/>
         <image name="write" width="75" height="70"/>
     </resources>
 </document>
