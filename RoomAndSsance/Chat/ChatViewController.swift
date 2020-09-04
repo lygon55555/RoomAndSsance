@@ -11,7 +11,7 @@ import UIKit
 import SendBirdUIKit
 
 class ChatViewController: UIViewController {
-    override func viewDidLoad() {
+    override func viewWillAppear(_ animated: Bool) {
         SBUMain.connect { _,_  in
             SBUStringSet.ChannelList_Header_Title = "채팅"
             SBUStringSet.OK = "확인"
@@ -34,18 +34,7 @@ class ChatViewController: UIViewController {
             SBUStringSet.MemberList_Me = "(나)"
             SBUStringSet.Empty_No_Messages = "메시지 없음"
             
-            let mainVC = SBUChannelListViewController()
-            mainVC.leftBarButton = nil
-            mainVC.navigationItem.setHidesBackButton(true, animated: false)
-            self.navigationController?.pushViewController(mainVC, animated: false)
-        }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        SBUMain.connect { _,_  in
-            SBUStringSet.ChannelList_Header_Title = "채팅"
-            
-            let mainVC = SBUChannelListViewController()
+            let mainVC = TestChannelListViewController()
             mainVC.leftBarButton = nil
             mainVC.navigationItem.setHidesBackButton(true, animated: false)
             self.navigationController?.pushViewController(mainVC, animated: false)
@@ -53,10 +42,22 @@ class ChatViewController: UIViewController {
     }
 }
 
-
-class TestChatViewController: SBUChannelViewController {
+class TestChannelListViewController: SBUChannelListViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hidesBottomBarWhenPushed = true
+    }
+    override func showChannel(channelUrl: String) {
+        let params = SBDMessageListParams()
+        params.includeMetaArray = true
+        params.includeReactions = true
+        params.includeReplies = true
+        let channelVC = SBUChannelViewController(
+            channelUrl: channelUrl,
+            messageListParams: params
+        )
+        channelVC.hidesBottomBarWhenPushed = true
+                
+        self.navigationController?.pushViewController(channelVC, animated: true)
     }
 }
