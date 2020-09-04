@@ -88,7 +88,6 @@ class ChatViewController: UIViewController {
             
             let mainVC = CustomChannelListViewController()
             mainVC.leftBarButton = nil
-            
             mainVC.navigationItem.setHidesBackButton(true, animated: false)
             self.navigationController?.pushViewController(mainVC, animated: false)
         }
