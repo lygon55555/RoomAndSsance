@@ -31,7 +31,6 @@ class WeeklyPagingCell: PagingCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        let insets = UIEdgeInsets(top: 0, left: 10, bottom: 20, right: 10)
         
         dateLabel.frame = CGRect(
             x: 0,
