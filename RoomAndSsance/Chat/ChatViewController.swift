@@ -58,6 +58,28 @@ class ChatViewController: SBUChannelListViewController {
             SBUStringSet.Channel_Name_No_Members = "대화 상대 없음"
             SBUStringSet.InviteChannel_Header_Select_Members = "새 관리자 선택"
             
+            SBUStringSet.Date_On = "온"
+            
+            SBUStringSet.Date_Year = { count in
+                return "\(count)년"
+            }
+            
+            SBUStringSet.Date_Month = { count in
+                return "\(count)달"
+            }
+            
+            SBUStringSet.Date_Min = { count in
+                return "\(count)분"
+            }
+            
+            SBUStringSet.Date_Day = { count in
+                return "\(count)일"
+            }
+            
+            SBUStringSet.Date_Hour = { count in
+                return "\(count)시간"
+            }
+            
             SBUStringSet.CreateChannel_Create = { count in
                 switch count {
                 case 0:
