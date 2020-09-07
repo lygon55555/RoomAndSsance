@@ -51,10 +51,21 @@ class HistoryViewController: UIViewController {
         if let index = pageIndex {
             pagingViewController.select(index: index)
         }
+        
+        let leftButton = UIButton(type: UIButton.ButtonType.custom)
+        leftButton.setImage(UIImage(named: "back"), for: .normal)
+        leftButton.addTarget(self, action:#selector(goBack), for: .touchDown)
+        leftButton.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
+        let leftBarButton = UIBarButtonItem(customView: leftButton)
+        self.navigationItem.leftBarButtonItems = [leftBarButton]
     }
     
     override func viewDidAppear(_ animated: Bool) {
         bottomPagingViewHeight.constant = historyPostVC.historyPostTableView.contentSize.height + 50
+    }
+    
+    @objc func goBack() {
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

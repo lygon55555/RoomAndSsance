@@ -67,9 +67,7 @@ class ClassPageViewController: UIViewController {
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        
-//        self.classBackgroundView.topAnchor.constraint(equalTo: self.classBackgroundView.superview!.topAnchor, constant: self.topbarHeight*(-1)).isActive = true
+        self.navigationController?.navigationBar.isTranslucent = true        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
