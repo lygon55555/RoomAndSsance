@@ -10,10 +10,9 @@ import Foundation
 import UIKit
 import SendBirdUIKit
 
-class ChatViewController: UIViewController {
-    override func viewWillAppear(_ animated: Bool) {
+class ChatViewController: SBUChannelListViewController {
+    override func viewDidLoad() {
         SBUMain.connect { _,_  in
-            
             SBUStringSet.ChannelList_Header_Title = "채팅"
             SBUStringSet.OK = "확인"
             SBUStringSet.Invite = "초대"
@@ -85,19 +84,14 @@ class ChatViewController: UIViewController {
                    return "\(count) 초대"
                }
             }
-            
-            let mainVC = CustomChannelListViewController()
-            mainVC.leftBarButton = nil
-            mainVC.navigationItem.setHidesBackButton(true, animated: false)
-            self.navigationController?.pushViewController(mainVC, animated: false)
         }
-    }
-}
-
-class CustomChannelListViewController: SBUChannelListViewController {
-    override func viewDidLoad() {
+        
         super.viewDidLoad()
+        self.navigationItem.leftBarButtonItem = nil
+        self.navigationItem.titleView = nil
+        self.navigationController?.navigationBar.topItem?.title = "채팅"
     }
+    
     override func showChannel(channelUrl: String) {
         let params = SBDMessageListParams()
         params.includeMetaArray = true
