@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B7014260492E8AF5968AB04E /* Pods_RoomAndSsance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA69DBA478822A2F4899C00 /* Pods_RoomAndSsance.framework */; };
 		C7117FCE24FF2BA90071418A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7117FCD24FF2BA90071418A /* ChatViewController.swift */; };
+		C7291B2925061F56009A1BF0 /* ProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7291B2825061F56009A1BF0 /* ProfileSettingViewController.swift */; };
 		C738166424FCEF9B00C34B8B /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738166324FCEF9B00C34B8B /* HistoryViewController.swift */; };
 		C738166824FCF08E00C34B8B /* HistoryPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738166724FCF08E00C34B8B /* HistoryPostViewController.swift */; };
 		C738166A24FCF0A000C34B8B /* HistoryCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738166924FCF0A000C34B8B /* HistoryCommentViewController.swift */; };
@@ -59,6 +60,7 @@
 		A67CF2B1835B877554A7A372 /* Pods-RoomAndSsance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoomAndSsance.release.xcconfig"; path = "Target Support Files/Pods-RoomAndSsance/Pods-RoomAndSsance.release.xcconfig"; sourceTree = "<group>"; };
 		BDA69DBA478822A2F4899C00 /* Pods_RoomAndSsance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoomAndSsance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7117FCD24FF2BA90071418A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		C7291B2825061F56009A1BF0 /* ProfileSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingViewController.swift; sourceTree = "<group>"; };
 		C738166324FCEF9B00C34B8B /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		C738166724FCF08E00C34B8B /* HistoryPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPostViewController.swift; sourceTree = "<group>"; };
 		C738166924FCF0A000C34B8B /* HistoryCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCommentViewController.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 			children = (
 				C7D19E0A24EDFC8D006A6E3B /* MyPageViewController.swift */,
 				C7D19E0E24EE4D31006A6E3B /* MyPagePagingCell.swift */,
+				C7291B2825061F56009A1BF0 /* ProfileSettingViewController.swift */,
 				C738166624FCF04700C34B8B /* MyPageLists */,
 				C738166224FCEF8900C34B8B /* History */,
 				C738166524FCEFC900C34B8B /* Setting */,
@@ -443,6 +446,7 @@
 				C7BA820824EBA88E00C2F739 /* WeeklyTimeTableViewController.swift in Sources */,
 				C7BA820E24EBAE3E00C2F739 /* DateFormatters.swift in Sources */,
 				C7E631D224F77CBC0018A531 /* ClassReviewViewController.swift in Sources */,
+				C7291B2925061F56009A1BF0 /* ProfileSettingViewController.swift in Sources */,
 				C7117FCE24FF2BA90071418A /* ChatViewController.swift in Sources */,
 				C738166424FCEF9B00C34B8B /* HistoryViewController.swift in Sources */,
 				C764505C24E27428005F654B /* AppDelegate.swift in Sources */,
