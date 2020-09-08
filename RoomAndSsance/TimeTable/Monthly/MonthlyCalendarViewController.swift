@@ -33,7 +33,7 @@ class MonthlyCalendarViewController: UIViewController {
         myStyle.cellTextColorDefault     = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1.0)
         myStyle.cellTextColorToday       = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1.0)
         myStyle.cellTextColorWeekend     = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1.0)
-        myStyle.cellColorOutOfRange      = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 0.3)
+        myStyle.cellColorOutOfRange      = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1.0)
         myStyle.cellSelectedTextColor    = UIColor.white
 
         myStyle.headerBackgroundColor    = UIColor.white
@@ -87,9 +87,8 @@ extension MonthlyCalendarViewController: CalendarViewDataSource {
         var dateComponents = DateComponents()
         dateComponents.month = Int(showMonth!)! - thisMonth
         
-        let threeMonthsAgo = self.calendarView.calendar.date(byAdding: dateComponents, to: today)!
-
-        return threeMonthsAgo
+        let startDate = self.calendarView.calendar.date(byAdding: dateComponents, to: today)!
+        return startDate
     }
 
     func endDate() -> Date {
@@ -99,9 +98,8 @@ extension MonthlyCalendarViewController: CalendarViewDataSource {
         var dateComponents = DateComponents()
         dateComponents.month = Int(showMonth!)! - thisMonth
         
-        let twoYearsFromNow = self.calendarView.calendar.date(byAdding: dateComponents, to: today)!
-
-        return twoYearsFromNow
+        let endDate = self.calendarView.calendar.date(byAdding: dateComponents, to: today)!
+        return endDate
     }
 }
 
