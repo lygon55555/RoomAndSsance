@@ -10,21 +10,14 @@ import Foundation
 import UIKit
 import Parchment
 
-// First thing we need to do is create our own PagingItem that will
-// hold our date. We need to make sure it conforms to Hashable and
-// Comparable, as that is required by PagingViewController. We also
-// cache the formatted date strings for performance.
 struct CalendarItem: PagingItem, Hashable, Comparable {
     let date: Date
     let monthText: String
     let yearText: String
 
     init(date: Date) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM"
-        
         self.date = date
-        self.monthText = dateFormatter.string(from: date)
+        self.monthText = DateFormatters.numberMonthFormatter.string(from: date)
         self.yearText = DateFormatters.yearFormatter.string(from: date)
     }
 
@@ -34,7 +27,6 @@ struct CalendarItem: PagingItem, Hashable, Comparable {
 }
 
 class MonthlyTimeTableViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,32 +42,20 @@ class MonthlyTimeTableViewController: UIViewController {
             height: 35,
             zIndex: -1,
             spacing: .zero,
-            insets: UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
+            insets: UIEdgeInsets(top: 0, left: 0, bottom: 22, right: 0)
         )
         
-        // Add the paging view controller as a child view
-        // controller and constrain it to all edges
         addChild(pagingViewController)
         view.addSubview(pagingViewController.view)
         view.constrainToEdges(pagingViewController.view)
         pagingViewController.didMove(toParent: self)
 
-        // Set our custom data source
         pagingViewController.infiniteDataSource = self
-
-        // Set the current date as the selected paging item
         pagingViewController.select(pagingItem: CalendarItem(date: Date()))
     }
 }
 
-// We need to conform to PagingViewControllerDataSource in order to
-// implement our custom data source. We set the initial item to be the
-// current date, and every time pagingItemBeforePagingItem: or
-// pagingItemAfterPagingItem: is called, we either subtract or append
-// the time interval equal to one day. This means our paging view
-// controller will show one menu item for each day.
 extension MonthlyTimeTableViewController: PagingViewControllerInfiniteDataSource {
-
     func pagingViewController(_: PagingViewController, itemAfter pagingItem: PagingItem) -> PagingItem? {
         let calendarItem = pagingItem as! CalendarItem
         let nextMonth = Calendar.current.date(byAdding: .month, value: 1, to: calendarItem.date)
@@ -89,13 +69,11 @@ extension MonthlyTimeTableViewController: PagingViewControllerInfiniteDataSource
     }
     
     func pagingViewController(_: PagingViewController, viewControllerFor pagingItem: PagingItem) -> UIViewController {
-        //    let calendarItem = pagingItem as! CalendarItem
-        //    let formattedDate = DateFormatters.shortDateFormatter.string(from: calendarItem.date)
-        //    return ContentViewController(title: formattedDate)
-
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let calendarVC = storyboard.instantiateViewController(withIdentifier: "CalendarVC")
-
+        let calendarVC = storyboard.instantiateViewController(withIdentifier: "CalendarVC") as! MonthlyCalendarViewController
+        let pagingItem = pagingItem as! CalendarItem
+        calendarVC.showMonth = pagingItem.monthText
+        
         return calendarVC
     }
 }

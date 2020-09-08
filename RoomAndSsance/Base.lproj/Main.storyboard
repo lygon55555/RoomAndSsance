@@ -704,7 +704,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y20-Z3-PeI" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="781"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="811"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmS-9F-DBD" customClass="CalendarView" customModule="KDCalendar">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="356"/>
@@ -714,14 +714,14 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gcp-DS-n3y" userLabel="Line">
-                                                <rect key="frame" x="0.0" y="326" width="414" height="1"/>
+                                                <rect key="frame" x="0.0" y="356" width="414" height="1"/>
                                                 <color key="backgroundColor" red="0.8666666666666667" green="0.88235294117647056" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="ZP2-b7-lC5"/>
                                                 </constraints>
                                             </view>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6OU-02-0vq">
-                                                <rect key="frame" x="0.0" y="337" width="414" height="444"/>
+                                                <rect key="frame" x="0.0" y="367" width="414" height="444"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="444" id="Ter-wA-6rv"/>
@@ -756,7 +756,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ub-8h-2FX">
-                                                                            <rect key="frame" x="21" y="69" width="39" height="21"/>
+                                                                            <rect key="frame" x="21" y="69.5" width="39" height="21"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="21" id="KQf-X5-nLr"/>
                                                                             </constraints>
@@ -765,7 +765,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieg-Vr-woo">
-                                                                            <rect key="frame" x="21" y="90" width="320" height="225"/>
+                                                                            <rect key="frame" x="21" y="90.5" width="320" height="224"/>
                                                                             <color key="backgroundColor" red="0.94509803921568625" green="0.95294117647058818" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <string key="text">두번째 수업에는 물감을 가지고 기쁜 마음을 표현 해보는 시간이에요. 수업전에 살면서 기뻣었던 일에 대해서 무엇이 있었는지 생각해보면 수업이 쉽게 진행될거에요! * 준비물 : 물통에 물을 채워서 준비해주세요. 배송받은 물감, 색연필, 종이를 준비해 주세요</string>
                                                                             <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -781,8 +781,8 @@
                                                                         <constraint firstItem="ieg-Vr-woo" firstAttribute="leading" secondItem="0ub-8h-2FX" secondAttribute="leading" id="NzF-Hj-ce5"/>
                                                                         <constraint firstItem="ieg-Vr-woo" firstAttribute="centerX" secondItem="z8r-V3-SXI" secondAttribute="centerX" id="Qan-M0-t1s"/>
                                                                         <constraint firstItem="NVq-V2-A66" firstAttribute="leading" secondItem="z8r-V3-SXI" secondAttribute="leading" constant="21" id="Svm-Rm-2Fx"/>
-                                                                        <constraint firstAttribute="bottom" secondItem="ieg-Vr-woo" secondAttribute="bottom" constant="15" id="tkH-KI-Dj8"/>
-                                                                        <constraint firstItem="0ub-8h-2FX" firstAttribute="top" secondItem="R3L-cH-QnK" secondAttribute="bottom" constant="10" id="vCS-xW-q2L"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="ieg-Vr-woo" secondAttribute="bottom" multiplier="1.05" id="tkH-KI-Dj8"/>
+                                                                        <constraint firstItem="0ub-8h-2FX" firstAttribute="top" secondItem="R3L-cH-QnK" secondAttribute="bottom" multiplier="1.18" id="vCS-xW-q2L"/>
                                                                         <constraint firstItem="NVq-V2-A66" firstAttribute="top" secondItem="z8r-V3-SXI" secondAttribute="top" constant="17" id="w8Y-WI-zlt"/>
                                                                         <constraint firstItem="ieg-Vr-woo" firstAttribute="top" secondItem="0ub-8h-2FX" secondAttribute="bottom" id="wAs-u1-aPJ"/>
                                                                     </constraints>
@@ -814,7 +814,7 @@
                                             <constraint firstItem="6OU-02-0vq" firstAttribute="leading" secondItem="Y20-Z3-PeI" secondAttribute="leading" id="Kg1-1F-wNX"/>
                                             <constraint firstAttribute="trailing" secondItem="Gcp-DS-n3y" secondAttribute="trailing" id="VFS-4h-X16"/>
                                             <constraint firstAttribute="bottom" secondItem="6OU-02-0vq" secondAttribute="bottom" id="VWM-3g-AY2"/>
-                                            <constraint firstItem="Gcp-DS-n3y" firstAttribute="top" secondItem="nmS-9F-DBD" secondAttribute="bottom" constant="-30" id="aAR-XA-nF2"/>
+                                            <constraint firstItem="Gcp-DS-n3y" firstAttribute="top" secondItem="nmS-9F-DBD" secondAttribute="bottom" id="aAR-XA-nF2"/>
                                             <constraint firstAttribute="trailing" secondItem="6OU-02-0vq" secondAttribute="trailing" id="flL-J7-miA"/>
                                             <constraint firstItem="6OU-02-0vq" firstAttribute="top" secondItem="Gcp-DS-n3y" secondAttribute="bottom" constant="10" id="p1a-fA-xx4"/>
                                             <constraint firstAttribute="trailing" secondItem="nmS-9F-DBD" secondAttribute="trailing" id="tyI-kH-sGX"/>
