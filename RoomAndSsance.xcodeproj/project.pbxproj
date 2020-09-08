@@ -10,6 +10,7 @@
 		B7014260492E8AF5968AB04E /* Pods_RoomAndSsance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA69DBA478822A2F4899C00 /* Pods_RoomAndSsance.framework */; };
 		C7117FCE24FF2BA90071418A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7117FCD24FF2BA90071418A /* ChatViewController.swift */; };
 		C7291B2925061F56009A1BF0 /* ProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7291B2825061F56009A1BF0 /* ProfileSettingViewController.swift */; };
+		C7291B2B25072BDF009A1BF0 /* MonthlyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7291B2A25072BDF009A1BF0 /* MonthlyTableViewCell.swift */; };
 		C738166424FCEF9B00C34B8B /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738166324FCEF9B00C34B8B /* HistoryViewController.swift */; };
 		C738166824FCF08E00C34B8B /* HistoryPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738166724FCF08E00C34B8B /* HistoryPostViewController.swift */; };
 		C738166A24FCF0A000C34B8B /* HistoryCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738166924FCF0A000C34B8B /* HistoryCommentViewController.swift */; };
@@ -61,6 +62,7 @@
 		BDA69DBA478822A2F4899C00 /* Pods_RoomAndSsance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoomAndSsance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7117FCD24FF2BA90071418A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		C7291B2825061F56009A1BF0 /* ProfileSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingViewController.swift; sourceTree = "<group>"; };
+		C7291B2A25072BDF009A1BF0 /* MonthlyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyTableViewCell.swift; sourceTree = "<group>"; };
 		C738166324FCEF9B00C34B8B /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		C738166724FCF08E00C34B8B /* HistoryPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPostViewController.swift; sourceTree = "<group>"; };
 		C738166924FCF0A000C34B8B /* HistoryCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCommentViewController.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 				C7BA820924EBA89500C2F739 /* MonthlyTimeTableViewController.swift */,
 				C7BA820F24EBB03200C2F739 /* MonthlyPagingCell.swift */,
 				C7D19E0424ECB7DA006A6E3B /* MonthlyCalendarViewController.swift */,
+				C7291B2A25072BDF009A1BF0 /* MonthlyTableViewCell.swift */,
 			);
 			path = Monthly;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				C7BA820224EBA61A00C2F739 /* HorizontalFloatingHeaderLayout.swift in Sources */,
 				C738166C24FCF0B100C34B8B /* HistoryLikeViewController.swift in Sources */,
 				C7D19E1524F38E9D006A6E3B /* MyRoomViewController.swift in Sources */,
+				C7291B2B25072BDF009A1BF0 /* MonthlyTableViewCell.swift in Sources */,
 				C752854624FCC68700B37E5D /* RoomCommunityTableViewCell.swift in Sources */,
 				C7BA820C24EBAA3B00C2F739 /* UIView+constraints.swift in Sources */,
 			);
