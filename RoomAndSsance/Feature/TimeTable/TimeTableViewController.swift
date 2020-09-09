@@ -17,7 +17,7 @@ class TimeTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = false
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let weeklyTimeTableViewController = storyboard.instantiateViewController(withIdentifier: "WeeklyTimeTableVC")
@@ -46,9 +46,24 @@ class TimeTableViewController: UIViewController {
         pagingViewController.indicatorOptions = .visible(height: 5, zIndex: 0,
                                                             spacing: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10),
                                                             insets: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10))
+        
+        let rightButton = UIButton(type: UIButton.ButtonType.custom)
+        rightButton.setImage(UIImage(named: "notice0"), for: .normal)
+        rightButton.imageEdgeInsets = UIEdgeInsets(top: 5, left: 30, bottom: 5, right: 0)
+        
+        rightButton.addTarget(self, action:#selector(goToNotice), for: .touchDown)
+        rightButton.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
+        let rightBarButton = UIBarButtonItem(customView: rightButton)
+        self.navigationItem.rightBarButtonItems = [rightBarButton]
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        self.navigationController?.navigationBar.isTranslucent = false
+    }
+    
+    @objc func goToNotice() {
+        // 알림 보여주기
     }
 }
