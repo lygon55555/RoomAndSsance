@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B7014260492E8AF5968AB04E /* Pods_RoomAndSsance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA69DBA478822A2F4899C00 /* Pods_RoomAndSsance.framework */; };
 		C7117FCE24FF2BA90071418A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7117FCD24FF2BA90071418A /* ChatViewController.swift */; };
+		C714D36325086CBC0010C086 /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714D36225086CBC0010C086 /* SignInRequest.swift */; };
 		C7291B2925061F56009A1BF0 /* ProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7291B2825061F56009A1BF0 /* ProfileSettingViewController.swift */; };
 		C7291B2B25072BDF009A1BF0 /* MonthlyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7291B2A25072BDF009A1BF0 /* MonthlyTableViewCell.swift */; };
 		C738166424FCEF9B00C34B8B /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738166324FCEF9B00C34B8B /* HistoryViewController.swift */; };
@@ -61,6 +62,7 @@
 		A67CF2B1835B877554A7A372 /* Pods-RoomAndSsance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoomAndSsance.release.xcconfig"; path = "Target Support Files/Pods-RoomAndSsance/Pods-RoomAndSsance.release.xcconfig"; sourceTree = "<group>"; };
 		BDA69DBA478822A2F4899C00 /* Pods_RoomAndSsance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoomAndSsance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7117FCD24FF2BA90071418A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		C714D36225086CBC0010C086 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
 		C7291B2825061F56009A1BF0 /* ProfileSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingViewController.swift; sourceTree = "<group>"; };
 		C7291B2A25072BDF009A1BF0 /* MonthlyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyTableViewCell.swift; sourceTree = "<group>"; };
 		C738166324FCEF9B00C34B8B /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,33 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C714D35F25086C770010C086 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				C7BA820324EBA6B900C2F739 /* Home */,
+				C7BA820424EBA6C000C2F739 /* TimeTable */,
+				C7BA820524EBA6CE00C2F739 /* Chat */,
+				C7BA820624EBA6D800C2F739 /* MyPage */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		C714D36025086C830010C086 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C714D36125086C870010C086 /* Model */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		C714D36125086C870010C086 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C714D36225086CBC0010C086 /* SignInRequest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C738166224FCEF8900C34B8B /* History */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,10 +240,8 @@
 				C764505B24E27428005F654B /* AppDelegate.swift */,
 				C764505D24E27428005F654B /* SceneDelegate.swift */,
 				C764505F24E27428005F654B /* ViewController.swift */,
-				C7BA820324EBA6B900C2F739 /* Home */,
-				C7BA820424EBA6C000C2F739 /* TimeTable */,
-				C7BA820524EBA6CE00C2F739 /* Chat */,
-				C7BA820624EBA6D800C2F739 /* MyPage */,
+				C714D35F25086C770010C086 /* Feature */,
+				C714D36025086C830010C086 /* API */,
 				C7BA820024EBA60700C2F739 /* Util */,
 				C764506124E27428005F654B /* Main.storyboard */,
 				C764506424E27429005F654B /* Assets.xcassets */,
@@ -444,6 +471,7 @@
 				C7D19E1D24F3A280006A6E3B /* RoomNoticeViewController.swift in Sources */,
 				C7D19E0724ECFC71006A6E3B /* HomeViewController.swift in Sources */,
 				C7BA821224EBB05700C2F739 /* UIColor+interpolation.swift in Sources */,
+				C714D36325086CBC0010C086 /* SignInRequest.swift in Sources */,
 				C764506024E27428005F654B /* ViewController.swift in Sources */,
 				C7BA821424EBB48C00C2F739 /* ContentViewController.swift in Sources */,
 				C7BA820824EBA88E00C2F739 /* WeeklyTimeTableViewController.swift in Sources */,
