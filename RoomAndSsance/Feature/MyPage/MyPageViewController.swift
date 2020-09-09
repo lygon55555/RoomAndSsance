@@ -54,7 +54,7 @@ class MyPageViewController: UIViewController {
     let pagingViewController = PagingViewController()
 
     override func viewDidLoad() {
-        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.isHidden = true
         
         pagingViewController.register(MyPagePagingCell.self, for: ImageItem.self)
         
@@ -76,20 +76,10 @@ class MyPageViewController: UIViewController {
         pagingViewController.indicatorOptions = .visible(height: 4, zIndex: 0,
                                                             spacing: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10),
                                                             insets: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10))
-        
-        let rightButton = UIButton(type: UIButton.ButtonType.custom)
-        rightButton.setImage(UIImage(named: "setting"), for: .normal)
-        rightButton.imageEdgeInsets = UIEdgeInsets(top: 15, left: 20, bottom: 0, right: 0)
-        rightButton.addTarget(self, action:#selector(goToSetting), for: .touchDown)
-        rightButton.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
-        let rightBarButton = UIBarButtonItem(customView: rightButton)
-        self.navigationItem.rightBarButtonItems = [rightBarButton]
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = false
-        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
-        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -103,12 +93,6 @@ class MyPageViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
-    }
-    
-    @objc func goToSetting() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let settingVC = storyboard.instantiateViewController(withIdentifier: "SettingVC")
-        self.navigationController?.pushViewController(settingVC, animated: true)
     }
     
     @IBAction func showPostHistory(_ sender: Any) {

@@ -1380,10 +1380,10 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTi-2n-HZn" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1201.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1262.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xUN-df-lGF" userLabel="Profile Image View">
-                                                <rect key="frame" x="28" y="16" width="83" height="83"/>
+                                                <rect key="frame" x="28" y="70" width="83" height="83"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="xUN-df-lGF" secondAttribute="height" multiplier="1:1" id="YyI-Lf-nyH"/>
@@ -1392,7 +1392,7 @@
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryf-tF-435" userLabel="Camera Button View">
-                                                <rect key="frame" x="84" y="69" width="38" height="38"/>
+                                                <rect key="frame" x="84" y="123" width="38" height="38"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKL-is-Vjk" userLabel="Camera Button">
                                                         <rect key="frame" x="0.0" y="0.0" width="38" height="38"/>
@@ -1415,13 +1415,13 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="우리 세라 맘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCm-ho-XxV">
-                                                <rect key="frame" x="150" y="42.5" width="119" height="30"/>
+                                                <rect key="frame" x="150" y="96.5" width="119" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sXV-gn-mKy" userLabel="My Post Button View">
-                                                <rect key="frame" x="150" y="102.5" width="36" height="60"/>
+                                                <rect key="frame" x="150" y="156.5" width="36" height="60"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBg-Va-DyY">
                                                         <rect key="frame" x="0.5" y="4.5" width="35" height="35"/>
@@ -1468,7 +1468,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="peO-dJ-MEY" userLabel="My Comment Button View">
-                                                <rect key="frame" x="211" y="102.5" width="53" height="60"/>
+                                                <rect key="frame" x="211" y="156.5" width="53" height="60"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="peU-dV-W6l">
                                                         <rect key="frame" x="9" y="4.5" width="35" height="35"/>
@@ -1515,7 +1515,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbY-bA-Mzh" userLabel="My Like Button View">
-                                                <rect key="frame" x="274" y="102.5" width="59" height="60"/>
+                                                <rect key="frame" x="274" y="156.5" width="59" height="60"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BX5-ea-Vve">
                                                         <rect key="frame" x="12" y="4.5" width="35" height="35"/>
@@ -1562,30 +1562,42 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K4S-Rn-WFl" userLabel="Line">
-                                                <rect key="frame" x="0.0" y="184.5" width="414" height="2"/>
+                                                <rect key="frame" x="0.0" y="245.5" width="414" height="2"/>
                                                 <color key="backgroundColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="gOj-g5-FDx"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UrC-U5-Gvg">
-                                                <rect key="frame" x="0.0" y="201.5" width="414" height="1000"/>
+                                                <rect key="frame" x="0.0" y="262.5" width="414" height="1000"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1000" id="Uzq-2Y-ELx"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dasom****@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ab-j6-fMW">
-                                                <rect key="frame" x="150" y="77.5" width="132" height="14.5"/>
+                                                <rect key="frame" x="150" y="131.5" width="132" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YpO-nT-Bwy">
+                                                <rect key="frame" x="362" y="30" width="22" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="22" id="a2V-Ye-MLY"/>
+                                                    <constraint firstAttribute="height" constant="24" id="uTF-LT-WDw"/>
+                                                </constraints>
+                                                <state key="normal" image="setting"/>
+                                                <connections>
+                                                    <segue destination="Qpj-OC-dHs" kind="show" id="Kqd-hH-e2o"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="UrC-U5-Gvg" secondAttribute="bottom" id="1DY-T0-a9R"/>
                                             <constraint firstItem="sXV-gn-mKy" firstAttribute="centerY" secondItem="fbY-bA-Mzh" secondAttribute="centerY" id="1s6-ti-Q8M"/>
+                                            <constraint firstItem="YpO-nT-Bwy" firstAttribute="top" secondItem="fTi-2n-HZn" secondAttribute="top" constant="30" id="B7p-mQ-iwB"/>
                                             <constraint firstItem="UrC-U5-Gvg" firstAttribute="leading" secondItem="fTi-2n-HZn" secondAttribute="leading" id="F1u-H5-8ij"/>
                                             <constraint firstItem="UrC-U5-Gvg" firstAttribute="top" secondItem="K4S-Rn-WFl" secondAttribute="bottom" constant="15" id="HlD-QU-fXa"/>
                                             <constraint firstItem="fbY-bA-Mzh" firstAttribute="leading" secondItem="peO-dJ-MEY" secondAttribute="trailing" constant="10" id="Htb-3k-YMa"/>
@@ -1593,9 +1605,10 @@
                                             <constraint firstItem="ryf-tF-435" firstAttribute="top" secondItem="xUN-df-lGF" secondAttribute="top" constant="53" id="JKL-ap-5LA"/>
                                             <constraint firstItem="ryf-tF-435" firstAttribute="leading" secondItem="xUN-df-lGF" secondAttribute="leading" constant="56" id="JRM-T8-nal"/>
                                             <constraint firstItem="yCm-ho-XxV" firstAttribute="leading" secondItem="xUN-df-lGF" secondAttribute="trailing" multiplier="1.35" id="Kyl-m9-iA1"/>
-                                            <constraint firstItem="xUN-df-lGF" firstAttribute="top" secondItem="fTi-2n-HZn" secondAttribute="top" constant="16" id="MKX-7d-vgB"/>
+                                            <constraint firstItem="xUN-df-lGF" firstAttribute="top" secondItem="YpO-nT-Bwy" secondAttribute="bottom" constant="16" id="MKX-7d-vgB"/>
                                             <constraint firstItem="xUN-df-lGF" firstAttribute="leading" secondItem="fTi-2n-HZn" secondAttribute="leading" constant="28" id="ObO-SO-V3G"/>
                                             <constraint firstItem="peO-dJ-MEY" firstAttribute="leading" secondItem="sXV-gn-mKy" secondAttribute="trailing" constant="25" id="QY3-NM-wrc"/>
+                                            <constraint firstAttribute="trailing" secondItem="YpO-nT-Bwy" secondAttribute="trailing" constant="30" id="T8k-24-3av"/>
                                             <constraint firstAttribute="trailing" secondItem="K4S-Rn-WFl" secondAttribute="trailing" id="W3q-t7-nF1"/>
                                             <constraint firstItem="4Ab-j6-fMW" firstAttribute="leading" secondItem="yCm-ho-XxV" secondAttribute="leading" id="Y4d-kf-icF"/>
                                             <constraint firstItem="yCm-ho-XxV" firstAttribute="centerY" secondItem="xUN-df-lGF" secondAttribute="centerY" id="cDT-dA-6cI"/>
@@ -1642,163 +1655,163 @@
             <objects>
                 <viewController storyboardIdentifier="SettingVC" id="Qpj-OC-dHs" customClass="SettingViewController" customModule="RoomAndSsance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PAz-YP-KBh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Llm-qK-cdk">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Llm-qK-cdk">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jG8-Lf-qFe">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jG8-Lf-qFe">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="761"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnK-QJ-Tbh">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnK-QJ-Tbh">
                                                 <rect key="frame" x="25" y="18" width="83" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                 <state key="normal" title="닉네임 변경">
                                                     <color key="titleColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AGf-tb-Sgi">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGf-tb-Sgi">
                                                 <rect key="frame" x="0.0" y="70" width="414" height="1"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="PM1-dU-JNq"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mg-iU-LRK">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mg-iU-LRK">
                                                 <rect key="frame" x="25" y="89" width="98" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                 <state key="normal" title="비밀번호 변경">
                                                     <color key="titleColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b2a-Eg-UVS">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2a-Eg-UVS">
                                                 <rect key="frame" x="0.0" y="141" width="414" height="1"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="l0b-jk-fCa"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkK-Ly-sP4">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkK-Ly-sP4">
                                                 <rect key="frame" x="25" y="160" width="98" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                 <state key="normal" title="전화번호 변경">
                                                     <color key="titleColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H5H-n4-Qc1">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5H-n4-Qc1">
                                                 <rect key="frame" x="0.0" y="212" width="414" height="1"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="xXe-V0-SQc"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dpl-sP-0MB">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dpl-sP-0MB">
                                                 <rect key="frame" x="25" y="231" width="83" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                 <state key="normal" title="주소지 변경">
                                                     <color key="titleColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dD0-dC-XLQ">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dD0-dC-XLQ">
                                                 <rect key="frame" x="0.0" y="283" width="414" height="1"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="SDf-cc-0cl"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q3B-5f-DKO">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3B-5f-DKO">
                                                 <rect key="frame" x="0.0" y="300" width="414" height="1"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="nG9-zS-wsb"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mdg-sb-1Vu">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mdg-sb-1Vu">
                                                 <rect key="frame" x="0.0" y="284" width="414" height="16"/>
                                                 <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="uWg-0p-5f3"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3M-aQ-sLx">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3M-aQ-sLx">
                                                 <rect key="frame" x="25" y="319" width="103" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                 <state key="normal" title="푸시 알림 설정">
                                                     <color key="titleColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lZc-dn-9ph">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZc-dn-9ph">
                                                 <rect key="frame" x="0.0" y="371" width="414" height="1"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="0Qt-cn-uoa"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZe-pw-eoK">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZe-pw-eoK">
                                                 <rect key="frame" x="25" y="390" width="83" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                 <state key="normal" title="의견 보내기">
                                                     <color key="titleColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o3B-mt-dzO">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3B-mt-dzO">
                                                 <rect key="frame" x="0.0" y="442" width="414" height="1"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="NxJ-Zj-frQ"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJi-G3-g97">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJi-G3-g97">
                                                 <rect key="frame" x="25" y="461" width="118" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                 <state key="normal" title="서비스 이용 약관">
                                                     <color key="titleColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sS3-Xc-CdV">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sS3-Xc-CdV">
                                                 <rect key="frame" x="0.0" y="513" width="414" height="1"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="WSY-ou-4fC"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dV-U1-tHo">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dV-U1-tHo">
                                                 <rect key="frame" x="25" y="532" width="130" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                 <state key="normal" title="개인정보 보호정책">
                                                     <color key="titleColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d5E-mL-RDk">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5E-mL-RDk">
                                                 <rect key="frame" x="0.0" y="584" width="414" height="1"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="B74-pd-dGm"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CCX-bS-uAi">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCX-bS-uAi">
                                                 <rect key="frame" x="0.0" y="601" width="414" height="1"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="TXB-o1-nDq"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nGH-ch-Wc9">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nGH-ch-Wc9">
                                                 <rect key="frame" x="0.0" y="585" width="414" height="16"/>
                                                 <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="qVa-RG-1Yy"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVb-ff-oIL">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVb-ff-oIL">
                                                 <rect key="frame" x="25" y="620" width="63" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                 <state key="normal" title="로그아웃">
                                                     <color key="titleColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5oe-HN-fZa">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5oe-HN-fZa">
                                                 <rect key="frame" x="0.0" y="672" width="414" height="1"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -2989,6 +3002,7 @@
         <image name="sample0" width="828" height="588"/>
         <image name="schedule0" width="66" height="66"/>
         <image name="scrap0" width="53" height="60"/>
+        <image name="setting" width="49" height="52"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="teacher" width="564" height="562"/>
