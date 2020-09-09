@@ -111,7 +111,8 @@ class ChatViewController: SBUChannelListViewController {
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.titleView = nil
-        self.navigationController?.navigationBar.topItem?.title = "채팅"
+        self.navigationController?.navigationBar.topItem?.title = "roomandssance"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-UltraLightItalic", size: 30)!]
     }
     
     override func showChannel(channelUrl: String) {

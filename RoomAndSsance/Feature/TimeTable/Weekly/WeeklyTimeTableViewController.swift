@@ -58,23 +58,21 @@ class WeeklyTimeTableViewController: UIViewController {
 }
 
 extension WeeklyTimeTableViewController: PagingViewControllerInfiniteDataSource {
-  
-  func pagingViewController(_: PagingViewController, itemAfter pagingItem: PagingItem) -> PagingItem? {
-    let calendarItem = pagingItem as! WeeklyPagingItem
-    return WeeklyPagingItem(date: calendarItem.date.addingTimeInterval(86400*7))
-  }
-  
-  func pagingViewController(_: PagingViewController, itemBefore pagingItem: PagingItem) -> PagingItem? {
-    let calendarItem = pagingItem as! WeeklyPagingItem
-    return WeeklyPagingItem(date: calendarItem.date.addingTimeInterval(-86400*7))
-  }
-  
-  func pagingViewController(_: PagingViewController, viewControllerFor pagingItem: PagingItem) -> UIViewController {    
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let weeklyCollectionVC = storyboard.instantiateViewController(withIdentifier: "WeeklyCollectionVC")
-    
-    return weeklyCollectionVC
-  }
+    func pagingViewController(_: PagingViewController, itemAfter pagingItem: PagingItem) -> PagingItem? {
+        let calendarItem = pagingItem as! WeeklyPagingItem
+        return WeeklyPagingItem(date: calendarItem.date.addingTimeInterval(86400*7))
+    }
+
+    func pagingViewController(_: PagingViewController, itemBefore pagingItem: PagingItem) -> PagingItem? {
+        let calendarItem = pagingItem as! WeeklyPagingItem
+        return WeeklyPagingItem(date: calendarItem.date.addingTimeInterval(-86400*7))
+    }
+
+    func pagingViewController(_: PagingViewController, viewControllerFor pagingItem: PagingItem) -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let weeklyCollectionVC = storyboard.instantiateViewController(withIdentifier: "WeeklyCollectionVC")
+        return weeklyCollectionVC
+    }
 }
 
 extension Date {
@@ -91,6 +89,7 @@ extension Date {
         for i in 1...7 {
             arrNextWeek.append(Calendar.current.date(byAdding: .day, value: i, to: arrThisWeek.last!)!)
         }
+        
         tuple = (thisWeek: arrThisWeek, nextWeek: arrNextWeek)
         return tuple
     }
