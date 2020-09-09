@@ -45,6 +45,7 @@ class MyPageViewController: UIViewController {
     
     @IBOutlet var myPagePagingView: UIView!
     @IBOutlet var pagingViewHeight: NSLayoutConstraint!
+    var pageIndex: Int = 0
     
     let mainstoryboard = UIStoryboard(name: "Main", bundle: nil)
     lazy var myRoomVC = mainstoryboard.instantiateViewController(withIdentifier: "MyRoomVC") as! MyRoomViewController
@@ -53,7 +54,7 @@ class MyPageViewController: UIViewController {
     let pagingViewController = PagingViewController()
 
     override func viewDidLoad() {
-        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = false
         
         pagingViewController.register(MyPagePagingCell.self, for: ImageItem.self)
         
@@ -75,21 +76,60 @@ class MyPageViewController: UIViewController {
         pagingViewController.indicatorOptions = .visible(height: 4, zIndex: 0,
                                                             spacing: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10),
                                                             insets: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10))
+        
+        let rightButton = UIButton(type: UIButton.ButtonType.custom)
+        rightButton.setImage(UIImage(named: "setting"), for: .normal)
+        rightButton.imageEdgeInsets = UIEdgeInsets(top: 15, left: 20, bottom: 0, right: 0)
+        rightButton.addTarget(self, action:#selector(goToSetting), for: .touchDown)
+        rightButton.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
+        let rightBarButton = UIBarButtonItem(customView: rightButton)
+        self.navigationItem.rightBarButtonItems = [rightBarButton]
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        self.navigationController?.navigationBar.isTranslucent = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        // 다른 탭 다녀오면 계속 실행됨
-        // 다른 탭으로 이동할 때 height 기억하게 로직 수정
-        
-        pagingViewHeight.constant = myRoomVC.myRoomTableView.contentSize.height + 75
+        switch pageIndex {
+        case 0: pagingViewHeight.constant = myRoomVC.myRoomTableView.contentSize.height + 75
+        case 1: pagingViewHeight.constant = scrapVC.scrapTableView.contentSize.height + 75
+        case 2: pagingViewHeight.constant = paymentVC.paymentTableView.contentSize.height + 75
+        default: break
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    @objc func goToSetting() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let settingVC = storyboard.instantiateViewController(withIdentifier: "SettingVC")
+        self.navigationController?.pushViewController(settingVC, animated: true)
+    }
+    
+    @IBAction func showPostHistory(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let settingVC = storyboard.instantiateViewController(withIdentifier: "HistoryVC") as! HistoryViewController
+        settingVC.pageIndex = 0
+        self.navigationController?.pushViewController(settingVC, animated: true)
+    }
+    
+    @IBAction func showCommentHistory(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let settingVC = storyboard.instantiateViewController(withIdentifier: "HistoryVC") as! HistoryViewController
+        settingVC.pageIndex = 1
+        self.navigationController?.pushViewController(settingVC, animated: true)
+    }
+    
+    @IBAction func showLikeHistory(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let settingVC = storyboard.instantiateViewController(withIdentifier: "HistoryVC") as! HistoryViewController
+        settingVC.pageIndex = 2
+        self.navigationController?.pushViewController(settingVC, animated: true)
     }
     
     @IBAction func chooseProfileImage(_ sender: Any) {
@@ -127,27 +167,33 @@ extension MyPageViewController: PagingViewControllerDelegate {
             if startingViewController is MyRoomViewController {
                 if destinationViewController is ScrapViewController {
                     pagingViewHeight.constant = scrapVC.scrapTableView.contentSize.height + 75
+                    pageIndex = 1
                 }
                 else {
                     pagingViewHeight.constant = paymentVC.paymentTableView.contentSize.height + 75
+                    pageIndex = 2
                 }
             }
             
             if startingViewController is PaymentViewController {
                 if destinationViewController is ScrapViewController {
                     pagingViewHeight.constant = scrapVC.scrapTableView.contentSize.height + 75
+                    pageIndex = 1
                 }
                 else {
                     pagingViewHeight.constant = myRoomVC.myRoomTableView.contentSize.height + 75
+                    pageIndex = 0
                 }
             }
             
             if startingViewController is ScrapViewController {
                 if destinationViewController is MyRoomViewController {
                     pagingViewHeight.constant = myRoomVC.myRoomTableView.contentSize.height + 75
+                    pageIndex = 0
                 }
                 else {
                     pagingViewHeight.constant = paymentVC.paymentTableView.contentSize.height + 75
+                    pageIndex = 2
                 }
             }
         }

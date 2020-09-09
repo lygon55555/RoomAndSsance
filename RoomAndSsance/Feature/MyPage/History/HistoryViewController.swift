@@ -64,7 +64,12 @@ class HistoryViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        bottomPagingViewHeight.constant = historyPostVC.historyPostTableView.contentSize.height + 50
+        switch pageIndex {
+        case 0: bottomPagingViewHeight.constant = historyPostVC.historyPostTableView.contentSize.height + 50
+        case 1: bottomPagingViewHeight.constant = historyCommentVC.historyCommentTableView.contentSize.height + 50
+        case 2: bottomPagingViewHeight.constant = historyLikeVC.historyLikeTableView.contentSize.height + 50
+        default: break
+        }
     }
     
     @objc func goBack() {
@@ -78,27 +83,33 @@ extension HistoryViewController: PagingViewControllerDelegate {
             if startingViewController is HistoryPostViewController {
                 if destinationViewController is HistoryCommentViewController {
                     bottomPagingViewHeight.constant = historyCommentVC.historyCommentTableView.contentSize.height + 50
+                    pageIndex = 1
                 }
                 else {
                     bottomPagingViewHeight.constant = historyLikeVC.historyLikeTableView.contentSize.height + 50
+                    pageIndex = 2
                 }
             }
             
             if startingViewController is HistoryLikeViewController {
                 if destinationViewController is HistoryCommentViewController {
                     bottomPagingViewHeight.constant = historyCommentVC.historyCommentTableView.contentSize.height + 50
+                    pageIndex = 1
                 }
                 else {
                     bottomPagingViewHeight.constant = historyPostVC.historyPostTableView.contentSize.height + 50
+                    pageIndex = 0
                 }
             }
             
             if startingViewController is HistoryCommentViewController {
                 if destinationViewController is HistoryPostViewController {
                     bottomPagingViewHeight.constant = historyPostVC.historyPostTableView.contentSize.height + 50
+                    pageIndex = 0
                 }
                 else {
                     bottomPagingViewHeight.constant = historyLikeVC.historyLikeTableView.contentSize.height + 50
+                    pageIndex = 2
                 }
             }
         }
