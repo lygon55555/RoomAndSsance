@@ -55,6 +55,8 @@
 		C7E631CE24F77C320018A531 /* ClassInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E631CD24F77C320018A531 /* ClassInfoViewController.swift */; };
 		C7E631D024F77C9E0018A531 /* ClassScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E631CF24F77C9E0018A531 /* ClassScheduleViewController.swift */; };
 		C7E631D224F77CBC0018A531 /* ClassReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E631D124F77CBC0018A531 /* ClassReviewViewController.swift */; };
+		C7FB3C4C2508B977007850FD /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB3C4B2508B977007850FD /* NotificationViewController.swift */; };
+		C7FB3C4E2508B9F7007850FD /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB3C4D2508B9F7007850FD /* NotificationTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +112,8 @@
 		C7E631CD24F77C320018A531 /* ClassInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassInfoViewController.swift; sourceTree = "<group>"; };
 		C7E631CF24F77C9E0018A531 /* ClassScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassScheduleViewController.swift; sourceTree = "<group>"; };
 		C7E631D124F77CBC0018A531 /* ClassReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassReviewViewController.swift; sourceTree = "<group>"; };
+		C7FB3C4B2508B977007850FD /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		C7FB3C4D2508B9F7007850FD /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +294,8 @@
 			isa = PBXGroup;
 			children = (
 				C7BA81FE24EBA27000C2F739 /* TimeTableViewController.swift */,
+				C7FB3C4B2508B977007850FD /* NotificationViewController.swift */,
+				C7FB3C4D2508B9F7007850FD /* NotificationTableViewCell.swift */,
 				C7BA821D24EBBF0A00C2F739 /* Weekly */,
 				C7BA821E24EBBF1400C2F739 /* Monthly */,
 				C796ABB924FC7B5A000A2EC5 /* Board */,
@@ -492,7 +498,9 @@
 				C796ABBD24FC7CA1000A2EC5 /* RoomCommunityViewController.swift in Sources */,
 				C7D19E1924F38EAE006A6E3B /* PaymentViewController.swift in Sources */,
 				C7D19DFF24ECB242006A6E3B /* WeeklyCollectionViewController.swift in Sources */,
+				C7FB3C4C2508B977007850FD /* NotificationViewController.swift in Sources */,
 				C764505E24E27428005F654B /* SceneDelegate.swift in Sources */,
+				C7FB3C4E2508B9F7007850FD /* NotificationTableViewCell.swift in Sources */,
 				C7D19E0D24EE0F86006A6E3B /* SettingViewController.swift in Sources */,
 				C7D19E1724F38EA6006A6E3B /* ScrapViewController.swift in Sources */,
 				C7BA820224EBA61A00C2F739 /* HorizontalFloatingHeaderLayout.swift in Sources */,

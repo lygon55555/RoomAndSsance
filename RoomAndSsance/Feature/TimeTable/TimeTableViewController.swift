@@ -51,7 +51,7 @@ class TimeTableViewController: UIViewController {
         rightButton.setImage(UIImage(named: "notice0"), for: .normal)
         rightButton.imageEdgeInsets = UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 0)
         
-        rightButton.addTarget(self, action:#selector(goToNotice), for: .touchDown)
+        rightButton.addTarget(self, action:#selector(goToNotification), for: .touchDown)
         rightButton.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
         let rightBarButton = UIBarButtonItem(customView: rightButton)
         self.navigationItem.rightBarButtonItems = [rightBarButton]
@@ -63,7 +63,9 @@ class TimeTableViewController: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = false
     }
     
-    @objc func goToNotice() {
-        // 알림 보여주기
+    @objc func goToNotification() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let notificationVC = storyboard.instantiateViewController(withIdentifier: "NotificationVC")
+        self.navigationController?.pushViewController(notificationVC, animated: true)
     }
 }
