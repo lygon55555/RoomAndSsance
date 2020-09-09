@@ -9,7 +9,6 @@
 import Foundation
 
 struct DateFormatters {
-  
     static var shortDateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.timeStyle = .none

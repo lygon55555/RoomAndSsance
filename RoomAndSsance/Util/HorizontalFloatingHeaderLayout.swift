@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc public protocol HorizontalFloatingHeaderLayoutDelegate: class{
+@objc public protocol HorizontalFloatingHeaderLayoutDelegate: class {
     //Item size
     func collectionView(_ collectionView: UICollectionView,horizontalFloatingHeaderItemSizeAt indexPath:IndexPath) -> CGSize
     
@@ -28,14 +28,14 @@ import UIKit
 public class HorizontalFloatingHeaderLayout: UICollectionViewLayout {
     //MARK: - Properties
     public override var collectionViewContentSize: CGSize {
-        get{
+        get {
             return getContentSize()
         }
     }
     
     //MARK: Headers properties
     //Variables
-    private var sectionHeadersAttributes: [IndexPath:UICollectionViewLayoutAttributes]{
+    private var sectionHeadersAttributes: [IndexPath:UICollectionViewLayoutAttributes]  {
         get{
             return getSectionHeadersAttributes()
         }
@@ -54,15 +54,15 @@ public class HorizontalFloatingHeaderLayout: UICollectionViewLayout {
     }
     
     //Items
-    private func prepareItemsAttributes(){
-        func resetAttributes(){
+    private func prepareItemsAttributes() {
+        func resetAttributes() {
             itemsAttributes.removeAll()
             currentMinX = 0
             currentMaxX = 0
             currentMinY = 0
         }
         
-        func configureVariables(forSection section:Int){
+        func configureVariables(forSection section:Int) {
             let sectionInset = inset(ForSection: section)
             let lastSectionInset = inset(ForSection: section - 1)
             currentMinX = (currentMaxX + sectionInset.left + lastSectionInset.right)
@@ -70,23 +70,23 @@ public class HorizontalFloatingHeaderLayout: UICollectionViewLayout {
             currentMaxX = 0.0
         }
         
-        func itemAttribute(at indexPath:IndexPath)->UICollectionViewLayoutAttributes{
+        func itemAttribute(at indexPath:IndexPath)->UICollectionViewLayoutAttributes {
             //Applying corrected layout
-            func newLineOrigin(size:CGSize)->CGPoint{
+            func newLineOrigin(size:CGSize)->CGPoint {
                 var origin = CGPoint.zero
                 origin.x = currentMaxX + columnSpacing(forSection: indexPath.section)
                 origin.y = inset(ForSection: indexPath.section).top + headerSize(forSection: indexPath.section).height
                 return origin
             }
             
-            func sameLineOrigin(size:CGSize)->CGPoint{
+            func sameLineOrigin(size:CGSize)->CGPoint {
                 var origin = CGPoint.zero
                 origin.x = currentMinX
                 origin.y = currentMinY
                 return origin
             }
             
-            func updateVariables(itemFrame frame:CGRect){
+            func updateVariables(itemFrame frame:CGRect) {
                 currentMaxX = max(currentMaxX,frame.maxX)
                 currentMinX = frame.minX
                 currentMinY = frame.maxY + itemSpacing(forSection: indexPath.section)
@@ -96,11 +96,14 @@ public class HorizontalFloatingHeaderLayout: UICollectionViewLayout {
             let size = itemSize(for: indexPath)
             let newMaxY = currentMinY + size.height
             let origin:CGPoint
-            if newMaxY >  availableHeight(atSection: indexPath.section){
+            
+            if newMaxY >  availableHeight(atSection: indexPath.section) {
                 origin = newLineOrigin(size: size)
-            }else{
+            }
+            else {
                 origin = sameLineOrigin(size: size)
             }
+            
             let frame = CGRect(x:origin.x, y:origin.y, width:size.width, height:size.height)
             let attribute = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             attribute.frame = frame
@@ -108,7 +111,6 @@ public class HorizontalFloatingHeaderLayout: UICollectionViewLayout {
             return attribute
         }
         
-        //
         guard let collectionView = collectionView else {
             return
         }
@@ -136,10 +138,10 @@ public class HorizontalFloatingHeaderLayout: UICollectionViewLayout {
     
     //MARK: - LayoutAttributesForElementsInRect methods
     override public func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        func attributes(_ attributes:[IndexPath:UICollectionViewLayoutAttributes],containedIn rect:CGRect) -> [UICollectionViewLayoutAttributes]{
+        func attributes(_ attributes:[IndexPath:UICollectionViewLayoutAttributes],containedIn rect:CGRect) -> [UICollectionViewLayoutAttributes] {
             var finalAttributes = [UICollectionViewLayoutAttributes]()
-            for (_,attribute) in attributes{
-                if rect.intersects(attribute.frame){
+            for (_,attribute) in attributes {
+                if rect.intersects(attribute.frame) {
                     finalAttributes.append(attribute)
                 }
             }
@@ -147,7 +149,6 @@ public class HorizontalFloatingHeaderLayout: UICollectionViewLayout {
             return finalAttributes
         }
         
-        //
         let itemsA = attributes(itemsAttributes, containedIn: rect)
         let headersA = Array(sectionHeadersAttributes.values)
         return itemsA + headersA
@@ -164,7 +165,8 @@ public class HorizontalFloatingHeaderLayout: UICollectionViewLayout {
             let lastIndexInSection = collectionView.numberOfItems(inSection:lastSection) - 1
             if let lastItemAttributes = layoutAttributesForItem(at: IndexPath(row: lastIndexInSection, section: lastSection)){
                 return lastItemAttributes.frame.maxX
-            }else{
+            }
+            else {
                 return 0
             }
         }
@@ -181,6 +183,7 @@ public class HorizontalFloatingHeaderLayout: UICollectionViewLayout {
         let fromIndexPath = IndexPath(row: indexPath.row, section: indexPath.section)
         return itemsAttributes[fromIndexPath]
     }
+    
     //MARK: For SupplementaryViewOfKind
     public override func layoutAttributesForSupplementaryView(ofKind elementKind: String, at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         switch elementKind {
@@ -194,28 +197,28 @@ public class HorizontalFloatingHeaderLayout: UICollectionViewLayout {
     
     //MARK: - Utility methods
     //MARK: SectionHeaders Attributes methods
-    private func getSectionHeadersAttributes()->[IndexPath:UICollectionViewLayoutAttributes]{
-        func attributeForSectionHeader(at indexPath:IndexPath) -> UICollectionViewLayoutAttributes{
-            func size()->CGSize{
+    private func getSectionHeadersAttributes() -> [IndexPath:UICollectionViewLayoutAttributes] {
+        func attributeForSectionHeader(at indexPath:IndexPath) -> UICollectionViewLayoutAttributes {
+            func size() -> CGSize {
                 return headerSize(forSection: indexPath.section)
             }
-            //
-            func position()->CGPoint{
+            
+            func position()->CGPoint {
                 if let itemsCount = collectionView?.numberOfItems(inSection: indexPath.section),
                     let firstItemAttributes = layoutAttributesForItem(at: indexPath),
-                    let lastItemAttributes = layoutAttributesForItem(at: IndexPath(row: itemsCount-1, section: indexPath.section)){
-                        let edgeX = collectionView!.contentOffset.x + collectionView!.contentInset.left
-                        let xByLeftBoundary = max(edgeX,firstItemAttributes.frame.minX)
-                        //
-                        let width = size().width
-                        let xByRightBoundary = lastItemAttributes.frame.maxX - width
-                        let x = min(xByLeftBoundary,xByRightBoundary)
+                    let lastItemAttributes = layoutAttributesForItem(at: IndexPath(row: itemsCount-1, section: indexPath.section)) {
+                    let edgeX = collectionView!.contentOffset.x + collectionView!.contentInset.left
+                    let xByLeftBoundary = max(edgeX,firstItemAttributes.frame.minX)
+                    let width = size().width
+                    let xByRightBoundary = lastItemAttributes.frame.maxX - width
+                    let x = min(xByLeftBoundary,xByRightBoundary)
                     return CGPoint(x:x, y:0)
-                }else{
+                }
+                else {
                     return CGPoint(x:inset(ForSection: indexPath.section).left, y:0)
                 }
             }
-            //
+            
             let attribute = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, with: indexPath)
             let myPosition = position()
             let mySize = size()
@@ -224,7 +227,7 @@ public class HorizontalFloatingHeaderLayout: UICollectionViewLayout {
             
             return attribute
         }
-        //
+        
         guard let collectionView = collectionView else {
             return [:]
         }
@@ -249,25 +252,24 @@ public class HorizontalFloatingHeaderLayout: UICollectionViewLayout {
     }
     
     public override func invalidationContext(forBoundsChange newBounds: CGRect) -> UICollectionViewLayoutInvalidationContext {
-        func isSizeChanged()->Bool{
+        func isSizeChanged() -> Bool {
             let oldBounds = collectionView!.bounds
             return oldBounds.width != newBounds.width || oldBounds.height != newBounds.height
         }
         
-        func headersIndexPaths()->[IndexPath]{
+        func headersIndexPaths()->[IndexPath] {
             return Array(sectionHeadersAttributes.keys)
         }
         
-        //
         let context = super.invalidationContext(forBoundsChange: newBounds)
-        if !isSizeChanged(){
+        if !isSizeChanged() {
             context.invalidateSupplementaryElements(ofKind: UICollectionView.elementKindSectionHeader, at: headersIndexPaths())
         }
         return context
     }
     
     //MARK: - Utility methods
-    private func itemSize(for indexPath:IndexPath) -> CGSize{
+    private func itemSize(for indexPath:IndexPath) -> CGSize {
         guard   let collectionView = collectionView,
                 let delegate = collectionView.delegate as? HorizontalFloatingHeaderLayoutDelegate else {
             return CGSize.zero
@@ -276,7 +278,7 @@ public class HorizontalFloatingHeaderLayout: UICollectionViewLayout {
         return delegate.collectionView(collectionView, horizontalFloatingHeaderItemSizeAt: indexPath)
     }
     
-    private func headerSize(forSection section:Int) -> CGSize{
+    private func headerSize(forSection section:Int) -> CGSize {
         guard   let collectionView = collectionView,
                 let delegate = collectionView.delegate as? HorizontalFloatingHeaderLayoutDelegate,
                 section >= 0 else {
@@ -286,51 +288,51 @@ public class HorizontalFloatingHeaderLayout: UICollectionViewLayout {
         return delegate.collectionView(collectionView, horizontalFloatingHeaderSizeAt: section)
     }
     
-    private func inset(ForSection section:Int) -> UIEdgeInsets{
+    private func inset(ForSection section:Int) -> UIEdgeInsets {
         let defaultValue = UIEdgeInsets.zero
-        guard   let collectionView = collectionView,
-                let delegate = collectionView.delegate as? HorizontalFloatingHeaderLayoutDelegate,
-                section >= 0 else {
+        
+        guard let collectionView = collectionView,
+            let delegate = collectionView.delegate as? HorizontalFloatingHeaderLayoutDelegate,
+            section >= 0 else {
                 return defaultValue
         }
         
         return delegate.collectionView?(collectionView, horizontalFloatingHeaderSectionInsetAt: section) ?? defaultValue
     }
     
-    private func columnSpacing(forSection section:Int) -> CGFloat{
+    private func columnSpacing(forSection section:Int) -> CGFloat {
         let defaultValue:CGFloat = 0.0
-        guard   let collectionView = collectionView,
-                let delegate = collectionView.delegate as? HorizontalFloatingHeaderLayoutDelegate,
-                section >= 0 else {
+        guard let collectionView = collectionView,
+            let delegate = collectionView.delegate as? HorizontalFloatingHeaderLayoutDelegate,
+            section >= 0 else {
                 return defaultValue
         }
         
         return delegate.collectionView?(collectionView, horizontalFloatingHeaderColumnSpacingForSectionAt: section) ?? defaultValue
     }
     
-    private func itemSpacing(forSection section:Int) -> CGFloat{
+    private func itemSpacing(forSection section:Int) -> CGFloat {
         let defaultValue:CGFloat = 0.0
-        guard   let collectionView = collectionView,
-                let delegate = collectionView.delegate as? HorizontalFloatingHeaderLayoutDelegate,
-                section >= 0 else {
+        guard let collectionView = collectionView,
+            let delegate = collectionView.delegate as? HorizontalFloatingHeaderLayoutDelegate,
+            section >= 0 else {
                 return defaultValue
         }
         
         return delegate.collectionView?(collectionView, horizontalFloatingHeaderItemSpacingForSectionAt: section) ?? defaultValue
     }
     
-    private func availableHeight(atSection section:Int)->CGFloat{
+    private func availableHeight(atSection section:Int) -> CGFloat {
         guard let collectionView = collectionView else {
             return 0.0
         }
         
-        func totalInset()->CGFloat{
+        func totalInset() -> CGFloat {
             let sectionInset = inset(ForSection: section)
             let contentInset = collectionView.contentInset
             return sectionInset.top + sectionInset.bottom + contentInset.top + contentInset.bottom
         }
         
-        //
         guard section >= 0 else {
             return 0.0
         }

@@ -33,16 +33,12 @@ class ClassPageViewController: UIViewController {
         let classScheduleVC = storyboard.instantiateViewController(withIdentifier: "ClassScheduleVC")
         let classReviewVC = storyboard.instantiateViewController(withIdentifier: "ClassReviewVC")
         
-        // Initialize a FixedPagingViewController and pass
-        // in the view controllers.
         let pagingViewController = PagingViewController(viewControllers: [
           classInfoVC,
           classScheduleVC,
           classReviewVC
         ])
         
-        // Make sure you add the PagingViewController as a child view
-        // controller and contrain it to the edges of the view.
         addChild(pagingViewController)
         bottomPagingView.addSubview(pagingViewController.view)
         bottomPagingView.constrainToEdges(pagingViewController.view)
@@ -52,7 +48,6 @@ class ClassPageViewController: UIViewController {
         pagingViewController.menuInteraction = .none
         pagingViewController.textColor = UIColor(red: 0.733, green: 0.733, blue: 0.733, alpha: 1)
         pagingViewController.selectedTextColor = UIColor(red: 0.267, green: 0.267, blue: 0.267, alpha: 1)
-//        pagingViewController.borderOptions = .hidden
         pagingViewController.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         pagingViewController.selectedFont = UIFont.systemFont(ofSize: 16, weight: .bold)
         pagingViewController.menuItemSize = .fixed(width: UIScreen.main.bounds.width*100/375, height: UIScreen.main.bounds.height*44/667)
@@ -64,7 +59,6 @@ class ClassPageViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
-        
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true        
@@ -90,9 +84,6 @@ class ClassPageViewController: UIViewController {
             bottomSafeArea = bottomLayoutGuide.length
         }
 
-        // safe area values are now available to use
-        
-        
         self.classBackgroundView.topAnchor.constraint(equalTo: self.classBackgroundView.superview!.topAnchor, constant: topSafeArea*(-1)).isActive = true
     }
     
@@ -102,13 +93,7 @@ class ClassPageViewController: UIViewController {
 }
 
 extension UIViewController {
-
-    /**
-     *  Height of status bar + navigation bar (if navigation bar exist)
-     */
-
     var topbarHeight: CGFloat {
-        return (view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0.0) +
-            (self.navigationController?.navigationBar.frame.height ?? 0.0)
+        return (view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0.0) + (self.navigationController?.navigationBar.frame.height ?? 0.0)
     }
 }

@@ -16,7 +16,7 @@ struct WeeklyPagingItem: PagingItem, Hashable, Comparable {
     let thisSun: String
     
     init(date: Date) {
-        let dateFormat = "MM.dd" // Date format
+        let dateFormat = "MM.dd"
         self.date = date
         self.thisMon = self.date.getWeekDates().thisWeek.first!.toDate(format: dateFormat)
         self.thisSun = self.date.getWeekDates().thisWeek[self.date.getWeekDates().thisWeek.count - 1].toDate(format: dateFormat)
@@ -46,17 +46,13 @@ class WeeklyTimeTableViewController: UIViewController {
             insets: UIEdgeInsets(top: 0, left: 0, bottom: 22, right: 0)
         )
         
-        // Add the paging view controller as a child view
-        // controller and constrain it to all edges
         addChild(pagingViewController)
         view.addSubview(pagingViewController.view)
         view.constrainToEdges(pagingViewController.view)
         pagingViewController.didMove(toParent: self)
 
-        // Set our custom data source
         pagingViewController.infiniteDataSource = self
 
-        // Set the current date as the selected paging item
         pagingViewController.select(pagingItem: WeeklyPagingItem(date: Date()))
     }
 }
@@ -73,11 +69,7 @@ extension WeeklyTimeTableViewController: PagingViewControllerInfiniteDataSource 
     return WeeklyPagingItem(date: calendarItem.date.addingTimeInterval(-86400*7))
   }
   
-  func pagingViewController(_: PagingViewController, viewControllerFor pagingItem: PagingItem) -> UIViewController {
-//    let calendarItem = pagingItem as! CalendarItem
-//    let formattedDate = DateFormatters.shortDateFormatter.string(from: calendarItem.date)
-//    return ContentViewController(title: formattedDate)
-    
+  func pagingViewController(_: PagingViewController, viewControllerFor pagingItem: PagingItem) -> UIViewController {    
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let weeklyCollectionVC = storyboard.instantiateViewController(withIdentifier: "WeeklyCollectionVC")
     

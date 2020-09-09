@@ -11,7 +11,6 @@ import UIKit
 
 class WeeklyCollectionViewController: UICollectionViewController, HorizontalFloatingHeaderLayoutDelegate {
 
-    //MARK: - Configure methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -85,7 +84,6 @@ class WeeklyCollectionViewController: UICollectionViewController, HorizontalFloa
     
     //Section Insets
     func collectionView(_ collectionView: UICollectionView, horizontalFloatingHeaderSectionInsetAt section: Int) -> UIEdgeInsets {
-        
         switch section{
         case 0:
             return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
