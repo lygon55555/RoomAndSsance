@@ -58,6 +58,9 @@ class HistoryViewController: UIViewController {
         leftButton.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
         let leftBarButton = UIBarButtonItem(customView: leftButton)
         self.navigationItem.leftBarButtonItems = [leftBarButton]
+        
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        self.navigationController?.navigationBar.isTranslucent = false
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -15,14 +15,23 @@ class PostViewController: UIViewController {
     @IBOutlet var textViewHeight: NSLayoutConstraint!
     
     override func viewDidLoad() {
-//        textView.sizeToFit()
-//
-//        var frame = self.textView.frame
-//        frame.size.height = self.textView.contentSize.height
-//        self.textView.frame = frame
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        self.navigationController?.navigationBar.isTranslucent = false
+        
+        let leftButton = UIButton(type: UIButton.ButtonType.custom)
+        leftButton.setImage(UIImage(named: "back"), for: .normal)
+        leftButton.addTarget(self, action:#selector(goBack), for: .touchDown)
+        leftButton.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
+        let leftBarButton = UIBarButtonItem(customView: leftButton)
+        self.navigationItem.leftBarButtonItems = [leftBarButton]
     }
     
     override func viewWillAppear(_ animated: Bool) {
         textViewHeight.constant = self.textView.contentSize.height
+    }
+    
+    @objc func goBack() {
+        self.navigationController?.popViewController(animated: true)
     }
 }
