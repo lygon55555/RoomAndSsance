@@ -1470,7 +1470,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acd-Bv-OhH">
                                                         <rect key="frame" x="0.0" y="0.0" width="36" height="60"/>
                                                         <connections>
-                                                            <action selector="showHistoryPost:" destination="SYE-lI-RdZ" eventType="touchUpInside" id="iCN-wZ-cYb"/>
+                                                            <segue destination="bOF-IC-Sc6" kind="show" id="Rwf-2e-f2q"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1517,7 +1517,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ld-8M-PAA">
                                                         <rect key="frame" x="0.0" y="0.0" width="53" height="60"/>
                                                         <connections>
-                                                            <action selector="showHistoryComment:" destination="SYE-lI-RdZ" eventType="touchUpInside" id="1dc-BR-XSQ"/>
+                                                            <segue destination="bOF-IC-Sc6" kind="show" id="pZ6-v5-VAn"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1564,7 +1564,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLF-Wz-DDr">
                                                         <rect key="frame" x="0.0" y="0.0" width="59" height="60"/>
                                                         <connections>
-                                                            <action selector="showHistoryLike:" destination="SYE-lI-RdZ" eventType="touchUpInside" id="BNJ-lN-IPD"/>
+                                                            <segue destination="bOF-IC-Sc6" kind="show" id="AHg-9n-dJG"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1596,14 +1596,6 @@
                                                     <constraint firstAttribute="height" constant="1000" id="Uzq-2Y-ELx"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xt-yJ-f6a">
-                                                <rect key="frame" x="277" y="96" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <connections>
-                                                    <segue destination="bOF-IC-Sc6" kind="show" id="fWR-Eh-Nnn"/>
-                                                </connections>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dasom****@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ab-j6-fMW">
                                                 <rect key="frame" x="150" y="131.5" width="132" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
@@ -3002,6 +2994,9 @@
             <point key="canvasLocation" x="244.92753623188409" y="2396.6517857142858"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="pZ6-v5-VAn"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="bell.fill" catalog="system" width="128" height="124"/>
         <image name="camera0" width="45" height="44"/>

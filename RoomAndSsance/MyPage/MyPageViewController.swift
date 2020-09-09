@@ -99,24 +99,6 @@ class MyPageViewController: UIViewController {
         picker.delegate = self
         self.present(picker, animated: true)
     }
-    
-    @IBAction func showHistoryPost(_ sender: Any) {
-        let vc = HistoryViewController(nibName: nil, bundle: nil)
-        vc.pageIndex = 0
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    @IBAction func showHistoryComment(_ sender: Any) {
-        let vc = HistoryViewController()
-        vc.pageIndex = 1
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    @IBAction func showHistoryLike(_ sender: Any) {
-        let vc = HistoryViewController()
-        vc.pageIndex = 2
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
 }
 
 extension MyPageViewController: PagingViewControllerDataSource {
