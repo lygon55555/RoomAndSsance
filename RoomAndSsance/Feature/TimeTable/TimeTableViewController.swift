@@ -49,7 +49,7 @@ class TimeTableViewController: UIViewController {
         
         let rightButton = UIButton(type: UIButton.ButtonType.custom)
         rightButton.setImage(UIImage(named: "notice0"), for: .normal)
-        rightButton.imageEdgeInsets = UIEdgeInsets(top: 5, left: 30, bottom: 5, right: 0)
+        rightButton.imageEdgeInsets = UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 0)
         
         rightButton.addTarget(self, action:#selector(goToNotice), for: .touchDown)
         rightButton.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
