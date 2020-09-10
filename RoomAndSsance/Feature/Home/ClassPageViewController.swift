@@ -66,7 +66,6 @@ class ClassPageViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
-        
         self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
         self.navigationController?.navigationBar.shadowImage = nil
     }
@@ -74,14 +73,11 @@ class ClassPageViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         let topSafeArea: CGFloat
-        let bottomSafeArea: CGFloat
 
         if #available(iOS 11.0, *) {
             topSafeArea = view.safeAreaInsets.top
-            bottomSafeArea = view.safeAreaInsets.bottom
         } else {
             topSafeArea = topLayoutGuide.length
-            bottomSafeArea = bottomLayoutGuide.length
         }
 
         self.classBackgroundView.topAnchor.constraint(equalTo: self.classBackgroundView.superview!.topAnchor, constant: topSafeArea*(-1)).isActive = true
