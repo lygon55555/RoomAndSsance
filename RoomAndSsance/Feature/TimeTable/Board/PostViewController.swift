@@ -25,6 +25,10 @@ class PostViewController: UIViewController {
         leftButton.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
         let leftBarButton = UIBarButtonItem(customView: leftButton)
         self.navigationItem.leftBarButtonItems = [leftBarButton]
+        
+        let dismissKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        dismissKeyboardGesture.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(dismissKeyboardGesture)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,5 +37,9 @@ class PostViewController: UIViewController {
     
     @objc func goBack() {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func hideKeyboard() {
+        view.endEditing(true)
     }
 }
