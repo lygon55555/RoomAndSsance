@@ -283,9 +283,7 @@
 			children = (
 				C7D19E0624ECFC71006A6E3B /* HomeViewController.swift */,
 				C7D19E1024EFF039006A6E3B /* ClassPageViewController.swift */,
-				C7E631CD24F77C320018A531 /* ClassInfoViewController.swift */,
-				C7E631CF24F77C9E0018A531 /* ClassScheduleViewController.swift */,
-				C7E631D124F77CBC0018A531 /* ClassReviewViewController.swift */,
+				C7FB3C4F2509AD56007850FD /* ClassPaging */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -346,6 +344,16 @@
 				C7291B2A25072BDF009A1BF0 /* MonthlyTableViewCell.swift */,
 			);
 			path = Monthly;
+			sourceTree = "<group>";
+		};
+		C7FB3C4F2509AD56007850FD /* ClassPaging */ = {
+			isa = PBXGroup;
+			children = (
+				C7E631CD24F77C320018A531 /* ClassInfoViewController.swift */,
+				C7E631CF24F77C9E0018A531 /* ClassScheduleViewController.swift */,
+				C7E631D124F77CBC0018A531 /* ClassReviewViewController.swift */,
+			);
+			path = ClassPaging;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
